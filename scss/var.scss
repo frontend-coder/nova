@@ -1,0 +1,33 @@
+$first-color-fon: #f2f2f2;
+$second-color-fon: #222222;
+$acsent-yellow-color:#f1c40f;
+
+@mixin trans {
+-moz-transition: all 0.5s ease 0.1s;
+-webkit-transition: all 0.5s ease 0.1s;
+transition: all 0.5s ease 0.1s;
+}
+
+/*все переменные и моды */
+// $link: #15157d;
+// $link_bottom: $link;
+
+  // width: $block_width - ( 5px * 2 ) - ( 1px * 2 );
+
+// как сделать миксинг
+// @mixin large-text {
+//   font: {
+//     family: Arial;
+//     size: 20px;
+//     weight: bold;
+//   }
+//   color: #ff0000;
+// }
+
+// как использовать миксинг
+// .page-title {
+//   @include large-text;
+//   padding: 4px;
+//   margin-top: 10px;
+// }
+
