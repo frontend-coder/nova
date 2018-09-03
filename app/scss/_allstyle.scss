@@ -2,31 +2,138 @@
 
 /* оформление содержимого шаблона, которое находится под
 header */
-.block {padding: 40px 0; }
+.block {padding: 40px 0;
+position: relative; }
 
+.block_grey {
+    background-color: #f2f2f2;}
 
+h2.block_title {
+   @include font-size(25px);
 
+    font-family: "RobotoSlabBold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin: 0 auto 20px auto;
+    text-align: center;
 
-
-
-
-.submit_bb {
-text-transform: uppercase;
-display: block;
-margin: 0 auto;
-text-align: center;
-background-color: transparent;
-border: 3px solid #fff;
-color:#000;
-margin-bottom: 50px;
-cursor: pointer;
- font-size: 1.4rem;
- padding: 9px 33px;
- box-shadow: 1px 1px 1px #95989A;
- margin-bottom: 10px;
- @include trans;
+}
+h2.block_title:before {
+	top:110%;
+	left: 50%;
+	margin-left:-50px;
+	width: 100px;
+	content: '';
+	position: absolute;
+	height: 6px;
+	background-color:  #f1c40f;
 }
 
-.submit_bb:hover {
-box-shadow:none;
+ h2.block_title:after {
+	top:115%;
+	left: 50%;
+	margin-left:-100px;
+	width: 200px;
+	content: '';
+	position: absolute;
+	height: 2px;
+	background-color:  #f1c40f;
  }
+
+.block_descrip {
+   @include font-size(16px);
+   text-align: center;
+   margin:0 10%;
+}
+
+.creat_block {
+	padding: 0;
+	margin: 0;
+}
+.creat_block_items {
+	width: 49%;
+	margin-right: 2%;
+	float:left;
+}
+.creat_block_items:last-child {
+margin-right: 0;
+}
+
+.creat-block-img {
+	padding: 0;
+	margin: 0;
+}
+
+.creat-block-img img {
+    width: 100%;
+    height: auto;
+}
+
+.creat-block-title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.creat-block-title span {
+    color: #f1c40f;
+}
+
+.creat-block-text {
+    margin-bottom: 20px;
+    font-size: .9em;
+}
+/* оформление блока наши предложения  */
+
+.our_pred_block {
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: flex-start;
+flex-wrap: wrap;
+}
+.our_pred_block_items {
+width: 30%;
+margin-right: 3.3%;
+margin-top: 3.3%;
+}
+.our_pred_block_items:nth-child(3n+3) {
+margin-right: 0;
+}
+
+.our_pred_icon {
+    color: #f1c40f;
+    font-size: 2rem;
+    float: left;
+    width: 15%;
+}
+.our_pred_text {
+	 width: 85%;
+   float: left;
+}
+
+.our_pred_text_title {
+    padding-top: 4px;
+    font-size: 1.125em;
+    font-family: "RobotoSlabBold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.our_pred_text_title:before {
+    content: "";
+    position: absolute;
+    border: 1px solid #f1c40f;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+}
+.our_pred_text_desc {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+

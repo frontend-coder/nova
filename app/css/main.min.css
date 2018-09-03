@@ -588,30 +588,134 @@ content: '\f095';
 /* оформление содержимого шаблона, которое находится под
 header */
 .block {
-  padding: 40px 0; }
+  padding: 40px 0;
+  position: relative; }
 
-.submit_bb {
+.block_grey {
+  background-color: #f2f2f2; }
+
+h2.block_title {
+  /*  // font-size: $size; */
+  font-size: 1.5625rem;
+  font-family: "RobotoSlabBold", sans-serif;
   text-transform: uppercase;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  background-color: transparent;
-  border: 3px solid #fff;
-  color: #000;
-  margin-bottom: 50px;
-  cursor: pointer;
-  font-size: 1.4rem;
-  padding: 9px 33px;
-  -webkit-box-shadow: 1px 1px 1px #95989A;
-          box-shadow: 1px 1px 1px #95989A;
-  margin-bottom: 10px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  letter-spacing: 2px;
+  position: relative;
+  margin: 0 auto 20px auto;
+  text-align: center; }
 
-.submit_bb:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none; }
+h2.block_title:before {
+  top: 110%;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  content: '';
+  position: absolute;
+  height: 6px;
+  background-color: #f1c40f; }
+
+h2.block_title:after {
+  top: 115%;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #f1c40f; }
+
+.block_descrip {
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 10%; }
+
+.creat_block {
+  padding: 0;
+  margin: 0; }
+
+.creat_block_items {
+  width: 49%;
+  margin-right: 2%;
+  float: left; }
+
+.creat_block_items:last-child {
+  margin-right: 0; }
+
+.creat-block-img {
+  padding: 0;
+  margin: 0; }
+
+.creat-block-img img {
+  width: 100%;
+  height: auto; }
+
+.creat-block-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 35px; }
+
+.creat-block-title span {
+  color: #f1c40f; }
+
+.creat-block-text {
+  margin-bottom: 20px;
+  font-size: .9em; }
+
+/* оформление блока наши предложения  */
+.our_pred_block {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.our_pred_block_items {
+  width: 30%;
+  margin-right: 3.3%;
+  margin-top: 3.3%; }
+
+.our_pred_block_items:nth-child(3n+3) {
+  margin-right: 0; }
+
+.our_pred_icon {
+  color: #f1c40f;
+  font-size: 2rem;
+  float: left;
+  width: 15%; }
+
+.our_pred_text {
+  width: 85%;
+  float: left; }
+
+.our_pred_text_title {
+  padding-top: 4px;
+  font-size: 1.125em;
+  font-family: "RobotoSlabBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 20px; }
+
+.our_pred_text_title:before {
+  content: "";
+  position: absolute;
+  border: 1px solid #f1c40f;
+  bottom: -10px;
+  left: 0;
+  width: 100px; }
+
+.our_pred_text_desc {
+  font-size: 0.9rem;
+  margin-bottom: 10px; }
 
 /* // задать все переменные
  */
@@ -696,5 +800,556 @@ content: '\f095';
   padding: 4px;
   margin-top: 10px;
  } */
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+}
+content: '\f095';
+    font-family: "FontAwesome";
+
+*/
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* стили формы обратной связи */
+/* стили формы обратной связи */
+.form-callback {
+  max-width: 480px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  -webkit-border-radius: 1rem;
+          border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin: auto;
+  border: 1px solid #fff; }
+
+.form-callback h4 {
+  color: #fff;
+  font-family: "RobotoSlabRegular", sans-serif;
+  text-align: center;
+  /*  // font-size: $size; */
+  font-size: 1.5rem;
+  margin: 20px 0 5px 0;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.35; }
+
+.form-callback h5 {
+  font-family: "RobotoSlabRegular", sans-serif;
+  text-align: center;
+  /*  // font-size: $size; */
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 20px; }
+
+.popup_input {
+  display: block;
+  width: 96%;
+  margin: 10px auto 0;
+  padding: 5px 0;
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  color: #000;
+  border: none;
+  border-bottom: 3px solid #f1c40f;
+  text-indent: 10px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.popup_input:focus, .popup_input:hover {
+  border-bottom: 3px solid #E5722C; }
+
+.popup_submit {
+  font-family: "RobotoSlabBold", sans-serif;
+  display: block;
+  width: 96%;
+  border: none;
+  padding: 7px 0;
+  margin: 10px auto 0;
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 3px solid #f1c40f;
+  background-color: #E5722C;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.popup_submit:hover {
+  border-bottom: 3px solid #E5722C;
+  background-color: #f1c40f; }
+
+.mfp-close-btn-in .mfp-close {
+  color: #fff; }
+
+.forms-call {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  overflow: hidden; }
+
+.form_fon_title {
+  color: #fff;
+  text-align: center;
+  /*  // font-size: $size; */
+  font-size: 1.5625rem; }
+
+.form_fon_title span {
+  text-transform: uppercase; }
+
+.forms-call label {
+  margin: 10px 0;
+  display: block; }
+
+.submit {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0;
+  height: 40px;
+  line-height: 40px;
+  /* 	font-weight: bold; */
+  /* 	// background-color: $color_button; */
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.submit:hover {
+  /* 	background-color: $color_hoverbutton; */ }
+
+.form_info {
+  color: #7E7E7E;
+  width: 80%;
+  margin: 20px auto;
+  /*  // font-size: $size; */
+  font-size: 0.75rem; }
+
+.checkbox_box {
+  margin: 10px auto;
+  width: 90%;
+  padding: 0;
+  color: #fff; }
+
+.big_form_case .checkbox_box {
+  margin: 10px auto;
+  width: 38%; }
+
+.radioterms {
+  width: 10%;
+  float: left;
+  margin-top: 10px; }
+
+.link_form {
+  float: right;
+  color: #95989A;
+  width: 87%;
+  top: -6px;
+  /*  // font-size: $size; */
+  font-size: 0.625rem;
+  position: relative; }
+
+.link_form:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px dashed #95989A;
+  top: 112%;
+  width: 78%; }
+
+.form_fon_mphone .link_form:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px dashed #95989A;
+  top: 112%;
+  width: 58%; }
+
+.link_form a {
+  color: #95989A;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.link_form a:hover .link_form:before {
+  border-bottom: 1px dashed #fff; }
+
+.big_form_case .link_form a {
+  color: #ffffff; }
+
+.big_form_case .link_form:before {
+  border-bottom: 1px dashed #ffffff;
+  width: 81%; }
+
+.form_fon_mphone .form_fon_title {
+  margin-bottom: 15px; }
+
+.form_fon_mphone .form_fon_title,
+.form_fon_mphone .form_fon_title span {
+  color: #000; }
+
+.form_fon_mphone .link_form a:hover {
+  /* 	color: $grey_color; */ }
+
+/*
+стилизую форму всплывашку для обратной связи */
+.form-callback_iner {
+  /* 	background-color:$color_button; */
+  padding-top: 20px; }
+
+.fcb {
+  margin: 0;
+  padding: 0;
+  /* 	background-color:$color_button; */ }
+
+.form-callback_item {
+  float: right;
+  margin-top: -1px;
+  padding-top: 15px;
+  width: 50%;
+  /* 	background-color:$color_button; */ }
+
+.b_item {
+  float: left;
+  width: 50%;
+  margin: 20px auto 0;
+  height: 261px;
+  text-align: center;
+  /* 	background: $color_button url('../images/septik-ergobox_327.png') center center no-repeat; */
+  -webkit-background-size: 286px 261px;
+          background-size: 286px 261px; }
+
+.form-callback_item .input_form {
+  /* color: $grey_color; */
+  font-size: 0.95rem; }
+
+.label_name {
+  margin-left: 5%; }
+
+.form-callback .button-call {
+  float: none;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px; }
+
+.form-callback .link_form a {
+  color: #fff; }
+
+.form-callback .link_form:before {
+  border-bottom: 1px dashed #fff;
+  width: 75%; }
+
+/*
+стилизую кнопки закрытия формы */
+.forms-call .mfp-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  /* 	background-color: $grey_color; */
+  border: 1px solid #fff;
+  -webkit-transition: all .75s ease;
+  -o-transition: all .75s ease;
+  transition: all .75s ease; }
+
+.forms-call .mfp-close:hover {
+  color: #1a1a1a; }
+
+/*
+стили оформления всплывашки политика кон */
+.politiks_popup {
+  background-color: transparent;
+  padding: 15px;
+  position: relative;
+  -webkit-transition: all 0.5s else;
+  -o-transition: all 0.5s else;
+  transition: all 0.5s else;
+  color: #000;
+  max-width: 750px;
+  margin: auto; }
+
+.politiks_popup_block {
+  padding: 10px;
+  background-color: #fff; }
+
+.politiks_popup_block h4 {
+  /*  // font-size: $size; */
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.politiks_popup_block h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 10px;
+  padding-bottom: 5px; }
+
+.politiks_popup_block p {
+  /*  // font-size: $size; */
+  font-size: 0.875rem; }
+
+.politiks_popup_block ul {
+  padding: 0 0 0 10px;
+  font-weight: bold;
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  padding-bottom: 5px; }
+
+.politiks_popup_block ul li {
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  font-weight: normal;
+  /*  // font-size: $size; */
+  font-size: 0.875rem; }
+
+.politiks_popup_block ul li ul li {
+  list-style-type: disc; }
+
+.politiks_popup_block ul li span {
+  font-weight: bold; }
+
+.fc-avtorpolit {
+  text-align: right;
+  font-size: 1rem; }
+
+.fc-avtorpolit a,
+.politiks_popup_block ul li a {
+  color: #FF9900;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.politiks_popup_block ul li a:hover,
+.politiks_popup_block a:hover {
+  text-decoration: underline; }
+
+.politiks_popup_block .mfp-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 0;
+  width: 30px;
+  font-size: 30px;
+  height: 30px;
+  line-height: 23px;
+  opacity: .7;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FF7800;
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s; }
+
+.politiks_popup_block .mfp-close:hover {
+  opacity: 1.0; }
+
+/* // переписать */
+.forms-calldecor {
+  position: relative; }
+
+.forms-calldecor .success {
+  color: #fff;
+  /* 					background-color: $color_button; */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  z-index: 1100;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-transition: all 3.0s ease;
+  -o-transition: all 3.0s ease;
+  transition: all 3.0s ease; }
+
+.forms-calldecor .success.active {
+  top: 0;
+  opacity: 1; }
+
+.forms-calldecor .success p {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #fff;
+  font-size: 20px;
+  margin: auto;
+  text-align: center; }
+
+/* // долюно работать анимация всплывашки */
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.615s ease-out;
+  -o-transition: all 0.615s ease-out;
+  transition: all 0.615s ease-out; }
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8; }
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0; }
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0; }
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transition: all 0.615s ease-out;
+  -o-transition: all 0.615s ease-out;
+  transition: all 0.615s ease-out;
+  -webkit-transform: translateY(1%);
+  -ms-transform: translateY(1%);
+  transform: translateY(1%); }
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transform: translateY(-120%);
+  -ms-transform: translateY(-120%);
+  transform: translateY(-120%); }
+
+.footer_fob {
+  width: 100%; }
+
+:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+:focus::-moz-placeholder {
+  color: transparent; }
+
+:focus:-moz-placeholder {
+  color: transparent; }
+
+:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:focus::-webkit-input-placeholder {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */
 
 /*# sourceMappingURL=main.min.css.map */
