@@ -87,16 +87,7 @@ gulp.task('scripts', function () {
 'app/libs/jQuery-Mask/jquery.mask.min.js',
 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
-
-// 'app/libs/equalHeights/equalHeights.min.js',
-// 'app/libs/animate/animate-css.js',
-// 'app/libs/animate/jquery.waypoints.min.js',
-// 'app/libs/jqBootstrapValidation/jqBootstrapValidation.js',
-//   'app/libs/mmenu/jquery.mmenu.all.js',
-//  'app/libs/owlcarousel/owl.carousel.min.js',
-//   'app/libs/swiper/swiper.min.js',
-//   'app/libs/paralax/parallax.min.js',
-//   'app/libs/Vertical-Horizontal-Tabs/jquery.tabs.min.js',
+'app/libs/OwlCarousel2/dist/owl.carousel.min.js',
 
 'app/libs/jquery/common.js'
    ])

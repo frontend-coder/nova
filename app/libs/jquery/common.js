@@ -48,8 +48,32 @@ $("a[href='#call-back']").click(function(){
 	$(".forms-call [name=admin-data]").val(dataForm);
 });
 
+//слайдер команды
 
-
+$('#comand_carousel').owlCarousel({
+		loop                 : true,
+		margin               : 30,
+		slideSpeed           : 2500,
+	//	autoplay             : true,
+		autoplayTimeout      : 3500,
+		nav                  : false,
+		dragBeforeAnimFinish : true,
+		mouseDrag            : true,
+		touchDrag            : true,
+		stagePadding         : 30,
+		stopOnHover          : false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
 
 
 
