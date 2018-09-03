@@ -1,0 +1,238 @@
+/* // задать все переменные
+ */
+
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+
+/* .divigin {
+  width: pxrem(30px);
+}
+content: '\f095';
+    font-family: "FontAwesome";
+
+*/
+
+
+$first-color-fon: #f2f2f2;
+$second-color-fon: #222222;
+$acsent-yellow-color:#f1c40f;
+
+
+
+@mixin padzero {
+padding: 0;
+margin: 0;
+}
+
+@mixin trans {
+-moz-transition: all 0.2s ease;
+-webkit-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+ /*  // font-size: $size; */
+  font-size: calculateRem($size);
+}
+
+
+@function pxrem($px, $context:16px) {
+  @return ($px / $context) * 1rem;
+}
+
+
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+
+
+
+
+
+
+
+
+
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+
+@mixin triangle ($width, $direction, $color) {
+ width: 0;
+    height: 0;
+  @if $direction == up {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+  }
+   @if $direction == down {
+     border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+   @if $direction == left {
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+    border-top: $width solid transparent;
+  }
+   @if $direction == right {
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+    border-top: $width solid transparent;
+  }
+}
+
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+@mixin trianglelong ($width, $longwidth, $direction, $color) {
+ width: 0;
+ height: 0;
+  @if $direction == up {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $longwidth solid $color;
+  }
+  @if $direction == down {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $longwidth solid $color;
+  }
+ @if $direction == left {
+    border-top: $width solid transparent;
+    border-left: $longwidth solid $color;
+    border-bottom: $width solid transparent;
+  }
+
+ @if $direction == right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $longwidth solid $color;
+  }
+}
+
+
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+@mixin trianglelight ($width, $height, $direction, $border, $arrowborder, $color) {
+  @if $direction == up {
+width: $width;
+height: $height;
+border: $border solid transparent; /* Прозрачные границы */
+border-bottom: $arrowborder solid $color; /* Добавляем треугольник */
+}
+  @if $direction == dawn {
+width: $width;
+height: $height;
+border: $border solid transparent; /* Прозрачные границы */
+border-top: $arrowborder solid $color; /* Добавляем треугольник */
+}
+  @if $direction == left {
+width: $width;
+height: $height;
+border: $border solid transparent; /* Прозрачные границы */
+border-right: $arrowborder solid $color; /* Добавляем треугольник */
+}
+  @if $direction == right {
+width: $width;
+height: $height;
+border: $border solid transparent; /* Прозрачные границы */
+border-left: $arrowborder solid $color; /* Добавляем треугольник */
+}
+
+}
+
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+
+@mixin triangle_in_corner ($width, $direction, $color) {
+ width: 0;
+    height: 0;
+  @if $direction == topleft {
+    border-top: $width solid $color;
+    border-right: $width solid transparent;
+  }
+    @if $direction == topright {
+    border-top: $width solid $color;
+    border-left: $width solid transparent;
+  }
+  @if $direction == bottomleft {
+    border-bottom: $width solid $color;
+    border-right: $width solid transparent;
+  }
+ @if $direction == bottomright {
+    border-bottom: $width solid $color;
+    border-left: $width solid transparent;
+  }
+}
+
+
+/*все переменные и моды */
+
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+
+/* как сделать миксинг */
+
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+

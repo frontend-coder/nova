@@ -1,0 +1,492 @@
+@import '_var.scss';
+/* стили формы обратной связи */
+/* стили формы обратной связи */
+
+.forms-call {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+}
+
+.form_fon_title {
+	color: #fff;
+	text-align: center;
+	@include font-size(25px);
+}
+.form_fon_title span {
+	text-transform: uppercase;
+	color: $color_button ;
+}
+
+.forms-call label{
+	margin:10px 0;
+	display:block;
+}
+
+.input_form {
+	display:block;
+	width:90%;
+	margin:10px auto 0;
+	height:40px;
+	@include font-size(20px);
+	line-height: 40px;
+	color:#000;
+	border: 1px solid $grey_color;
+	text-indent:10px;
+	@include trans;
+}
+
+.input-border {
+	border:1px solid #E5722C;
+
+}
+
+.input_form:focus,
+.input_form:hover  {
+	border: 1px solid $grey_color;
+	border-bottom: 1px solid $color_button;
+
+}
+.input-border:focus,
+.input-border:hover {
+	border: 1px solid #E5722C;
+	border-bottom: 1px solid $color_button;
+}
+
+.submit {
+	display:block;
+	width: 90%;
+	margin:10px auto 0;
+	height:40px;
+	line-height: 40px;
+	/* 	font-weight: bold; */
+	background-color: $color_button;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.2rem;
+	text-align: center;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	@include trans;
+}
+
+.submit:hover {
+	background-color: $color_hoverbutton;
+}
+.form_info {
+	color: #7E7E7E;
+	width: 80%;
+	margin: 20px auto;
+	@include font-size(12px);
+}
+.checkbox_box {
+	margin: 10px auto;
+	width: 90%;
+	padding: 0;
+	color: #fff;
+
+}
+.big_form_case .checkbox_box {
+        margin: 10px auto;
+        width: 38%;
+        }
+
+.radioterms {
+	width: 10%;
+	float: left;
+	margin-top: 10px;
+}
+
+.link_form {
+	float: right;
+	color: #95989A;
+	width: 87%;
+	top: -6px;
+	@include font-size(10px);
+	position: relative;
+
+}
+.link_form:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	border-bottom: 1px dashed #95989A;
+	top: 112%;
+	width: 78%;
+}
+.form_fon_mphone .link_form:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	border-bottom: 1px dashed #95989A;
+	top: 112%;
+	width: 58%;
+}
+
+.link_form a {
+	color: #95989A;
+	@include trans;
+}
+
+.link_form a:hover .link_form:before {
+	border-bottom: 1px dashed #fff;
+
+}
+.big_form_case .link_form a {
+        color: #ffffff;
+        }
+.big_form_case  .link_form:before {
+        border-bottom: 1px dashed #ffffff;        width: 81%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_fon_mphone .form_fon_title {
+	margin-bottom: 15px;
+}
+.form_fon_mphone .form_fon_title,
+.form_fon_mphone .form_fon_title span {
+	color: #000;
+}
+
+.form_fon_mphone .link_form a:hover  {
+	color: $grey_color;
+
+}
+
+/*
+стилизую форму всплывашку для обратной связи */
+
+
+.form-callback {
+	max-width: 750px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	/* 	background-color:$color_button; */
+	transition: all 0.5s else;
+
+	margin: auto;
+}
+.form-callback_iner {
+	background-color:$color_button;
+	padding-top: 20px;
+}
+
+.form-callback h4 {
+	/* color: $button-hover; */
+	text-align: center;
+	margin-bottom: 30px;
+	@include font-size(30px);
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	line-height: (37px / 30px);
+	margin-bottom: 20px;
+
+}
+.form-callback h5 {
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+	@include font-size(25px);
+	line-height: (30px / 25px);
+	color: #000;
+	font-weight: normal;
+
+}
+.fcb {
+	margin: 0;
+	padding: 0;
+	background-color:$color_button;
+}
+.form-callback_item  {
+	float: right;
+	margin-top: -1px;
+	padding-top: 15px;
+	width: 50%;
+	/* 	background-color:$color_button; */
+}
+.b_item {
+	float: left;
+	width: 50%;
+	margin: 20px auto 0;
+	height: 261px;
+	text-align: center;
+	background: $color_button url('../images/septik-ergobox_327.png') center center no-repeat;
+	background-size: 286px 261px;
+}
+.form-callback_item .input_form  {
+	color: $grey_color;
+	font-size: 0.95rem;
+
+}
+.label_name {
+	margin-left: 5%;
+}
+
+.form-callback .button-call {
+	float: none;
+	text-align: center;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.form-callback .link_form a {
+	color: #fff;
+
+}
+.form-callback .link_form:before {
+	border-bottom: 1px dashed #fff;
+	width: 75%;
+
+}
+/*
+стилизую кнопки закрытия формы */
+.forms-call .mfp-close {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	opacity: 1;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	@include font-size(30px);
+
+	border-radius: 50%;
+	background-color: $grey_color;
+	border: 1px solid #fff;
+	transition: all .75s ease;
+}
+
+
+.forms-call .mfp-close:hover {
+	color: lighten(#000, 10%);
+
+
+
+}
+
+
+
+
+
+/*
+стили оформления всплывашки политика кон */
+
+.politiks_popup {
+	background-color: transparent;
+	padding: 15px;
+	position: relative;
+	transition: all 0.5s else;
+	color: #000;
+	max-width: 750px;
+	margin: auto;
+}
+.politiks_popup_block {
+	padding: 10px;
+	background-color: #fff;
+}
+
+.politiks_popup_block h4 {
+	@include font-size(20px);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.politiks_popup_block h5 {
+       	font-size: 1rem;
+       	font-weight: 600;
+       	margin-left: 10px;
+        padding-bottom: 5px;
+      }
+
+
+
+
+.politiks_popup_block p {
+	@include font-size(14px);
+
+}
+
+.politiks_popup_block ul {
+	padding: 0 0 0 10px;
+	font-weight: bold;
+	@include font-size(16px);
+	padding-bottom: 5px; }
+
+	.politiks_popup_block ul li {
+
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  font-weight: normal;
+  @include font-size(14px);}
+
+  .politiks_popup_block ul li ul li {
+  	list-style-type: disc; }
+
+  	.politiks_popup_block ul li span {
+  		font-weight: bold; }
+
+  		.fc-avtorpolit {
+  			text-align: right;
+  			font-size: 1rem; }
+
+  			.fc-avtorpolit a,
+  			.politiks_popup_block ul li a
+  	 {
+  				color: #FF9900;
+  				text-decoration: none;
+  				-webkit-transition: all 0.2s ease;
+  				-o-transition: all 0.2s ease;
+  				transition: all 0.2s ease; }
+
+  			.politiks_popup_block ul li a:hover,
+  				.politiks_popup_block a:hover {
+  					text-decoration: underline; }
+
+  					.politiks_popup_block .mfp-close {
+  						position: absolute;
+  						right: 5px;
+  						top: 5px;
+  						padding: 0;
+  						width: 30px;
+  						font-size: 30px;
+  						height: 30px;
+  						line-height: 23px;
+  						opacity: .7;
+  						-webkit-border-radius: 50%;
+  						border-radius: 50%;
+  						border: 2px solid #FF7800;
+  						-webkit-transition: all 0.5s ease 0.1s;
+  						-o-transition: all 0.5s ease 0.1s;
+  						transition: all 0.5s ease 0.1s; }
+
+  						.politiks_popup_block .mfp-close:hover {
+  							opacity: 1.0; }
+
+  							/* // переписать */
+.forms-calldecor {
+	position: relative;
+}
+  							.forms-calldecor .success {
+  								color: #fff;
+  								background-color: $color_button;
+  								position: absolute;
+  								z-index: 1;
+  								left: 0;
+  								z-index: 1100;
+  								top: -100%;
+  								width: 100%;
+  								height: 100%;
+  								display: -webkit-box;
+  								display: -webkit-flex;
+  								display: -ms-flexbox;
+  								display: flex;
+  								-webkit-box-pack: center;
+  								-webkit-justify-content: center;
+  								-ms-flex-pack: center;
+  								justify-content: center;
+  								-webkit-box-orient: vertical;
+  								-webkit-box-direction: normal;
+  								-webkit-flex-direction: column;
+  								-ms-flex-direction: column;
+  								flex-direction: column;
+  								-webkit-box-align: center;
+  								-webkit-align-items: center;
+  								-ms-flex-align: center;
+  								align-items: center;
+  								opacity: 0;
+  								padding-right: 20px;
+  								padding-left: 20px;
+  								transition: all 3.0s ease; }
+
+  								.forms-calldecor .success.active{
+  									top: 0;
+  									opacity: 1;
+  								}
+
+  								.forms-calldecor .success p {
+  									text-transform: uppercase;
+  									display: -webkit-box;
+  									display: -webkit-flex;
+  									display: -ms-flexbox;
+  									display: flex;
+  									-webkit-align-self: center;
+  									-ms-flex-item-align: center;
+  									align-self: center;
+  									color: #fff;
+  									font-size: 20px;
+  									margin: auto;
+  									text-align: center; }
+
+  									/* // долюно работать анимация всплывашки */
+  									/* overlay at start */
+  									.mfp-fade.mfp-bg {
+  										opacity: 0;
+  										-webkit-transition: all 0.615s ease-out;
+  										-o-transition: all 0.615s ease-out;
+  										transition: all 0.615s ease-out; }
+
+  										/* overlay animate in */
+  										.mfp-fade.mfp-bg.mfp-ready {
+  											opacity: 0.8; }
+
+  											/* overlay animate out */
+  											.mfp-fade.mfp-bg.mfp-removing {
+  												opacity: 0; }
+
+  												/* content at start */
+  												.mfp-fade.mfp-wrap .mfp-content {
+  													opacity: 0; }
+
+  													/* content animate it */
+  													.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  														opacity: 1;
+  														-webkit-transition: all 0.615s ease-out;
+  														-o-transition: all 0.615s ease-out;
+  														transition: all 0.615s ease-out;
+  														-webkit-transform: translateY(1%);
+  														-ms-transform: translateY(1%);
+  														transform: translateY(1%); }
+
+  														/* content animate out */
+  														.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  															opacity: 0;
+  															-webkit-transform: translateY(-120%);
+  															-ms-transform: translateY(-120%);
+  															transform: translateY(-120%);
+  														}
+
+  														.footer_fob {
+  															width: 100%;
+  														}
+
+
+  														:focus::-webkit-input-placeholder {color: transparent}
+  														:focus::-moz-placeholder          {color: transparent}
+  														:focus:-moz-placeholder           {color: transparent}
+  														:focus:-ms-input-placeholder      {color: transparent}
+
+
+/* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:focus::-webkit-input-placeholder {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */

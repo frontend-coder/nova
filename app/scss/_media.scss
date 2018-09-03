@@ -1,0 +1,287 @@
+@import '_var.scss';
+@media (min-width: 737px) {
+  .container { width: 100%;  margin: 0 auto; }
+}
+@media (min-width: 768px) {
+  .container {width: 750px; margin: 0 auto; }
+}
+@media (min-width: 800px) {
+  .container { width: 780px;  margin: 0 auto;}
+}
+@media (min-width: 992px) {
+  .container { width: 970px; margin: 0 auto; }
+}
+@media (min-width: 1024px) {
+  .container { width: 1004px; margin: 0 auto; }
+}
+@media screen and (min-width: 1080px) {
+  .container { width: 1060px;  margin: 0 auto; }
+}
+@media only screen and (min-width : 1190px) {
+  .container { width: 1170px;  margin: 0 auto;}
+}
+@media only screen and (min-width : 1200px) {
+  .container {width: 1170px;  margin: 0 auto;}
+}
+
+/* ниже размещено стили оформления наполнения шаблона в
+зависимостиь от разрешения, в документ были вклюены все разрешения
+не зависомо от требования заказчика  */
+
+@media only screen and (max-width : 1440px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 1190px) {
+
+}
+
+@media screen and (max-width: 1080px) {
+
+}
+/* первое разрешение под казачика */
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 800px) {
+
+
+}
+
+@media only screen and (max-width: 768px) {
+.mobile_gamburger {
+  display: block;
+}
+.top_line_menu {
+        display: none;
+        }
+.header_content_item {
+        width: 100%;
+
+        float: none;
+      }
+      .header_img:before {
+display: none;
+
+      }
+      .header_content_item:last-child {
+        width: 100%;
+      }
+/*конец оформления кнопки  меню*/
+.top_mnu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(40, 40, 38, 0.80);
+  z-index:50;
+  right: 0;
+  top: -100%;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+}
+/* .top_mnu.active {
+top: 0;
+} */
+.top_mnu ul {
+  /*   margin-top: 120px; */
+  text-align: center;
+  width: 100%;
+}
+.top_mnu ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.top_mnu ul li a{
+  display: block;
+  font-family: "RobotoMedium", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding:20px;
+  color:#fff;
+
+  text-transform: uppercase;
+  @include trans;
+}
+
+.top_mnu ul li a:hover{
+  background-color:rgba(#fff, 0.40);
+  color:$color_button;
+}
+
+
+
+/*оформление скрытого меню*/
+.hidden-mnu {
+  background-color: rgba(#000, .7);
+
+  display: none;
+  min-width:100%;
+  position:absolute;
+  left:0;
+  top: 0;
+  z-index:1;
+}
+.hidden-mnu ul {
+  margin: 0;
+  padding: 0;
+}
+.hidden-mnu ul li {
+  display:block;
+  margin: 0;
+  padding: 0;
+}
+.hidden-mnu ul li a{
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.5;
+  padding:20px 0;
+  color:#fff;
+  @include trans;
+}
+
+.hidden-mnu ul li a:hover{
+  /* background-color:rgba(40, 40, 38, 0.60); */
+  color:$color_button;
+
+}
+
+
+.top_line_box, .top_line {
+  height: 80px;
+}
+
+/*Disable Animation on Mobile Devices*/
+.animated {
+  /*CSS transitions*/
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  /*CSS transforms*/
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  /*CSS animations*/
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+
+}
+/* end  (max-width: 768px) */
+@media only screen and (max-width: 740px) {
+
+}
+
+@media only screen and (max-width: 736px) {
+
+
+
+}
+
+@media only screen and (max-width: 734px) {
+
+
+
+}
+
+@media only screen and (max-width: 684px) {
+
+
+
+}
+
+@media only screen and (max-width: 667px) {
+
+
+
+}
+
+@media only screen and (max-width: 640px) {
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+}
+
+@media only screen and (max-width: 568px) {
+
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+
+}
+
+@media only screen and (max-width: 425px) {
+
+
+
+}
+
+@media only screen and (max-width: 414px) {
+
+
+
+}
+
+@media only screen and (max-width: 412px) {
+
+
+
+}
+
+@media only screen and (max-width: 384px) {
+
+
+
+}
+
+@media only screen and (max-width: 375px) {
+
+
+
+}
+
+@media only screen and (max-width: 360px) {
+
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+
+}
