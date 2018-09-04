@@ -75,7 +75,27 @@ $('#comand_carousel').owlCarousel({
     }
 });
 
-
+// начало блока портфолио
+	$(function () {
+		var filterList = {
+			init: function () {
+						// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'
+    		  },
+    		  load: {
+      		  filter: '.app'
+      		}
+				});
+		}
+	};
+	// Run the show!
+		filterList.init();
+	});
+// конец блока портфолио
 
 
 //Ajax push mesege http://api.jquery.com/jquery.ajax/
