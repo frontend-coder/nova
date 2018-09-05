@@ -595,6 +595,10 @@ header */
   padding: 40px 0;
   position: relative; }
 
+.block_map {
+  padding: 40px 0 0 0;
+  position: relative; }
+
 .block_top {
   padding-top: 40px;
   position: relative; }
@@ -725,10 +729,8 @@ h2.block_title:after {
   font-size: 0.9rem;
   margin-bottom: 10px; }
 
-.block-darken {
-  background-color: #222222; }
-
 .block_mini_box {
+  position: relative;
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -775,8 +777,6 @@ h2.block_title:after {
   border-left: 1px solid #f5f5f7;
   border-right: 1px solid #f5f5f7;
   border-bottom: 2px solid #f1c40f;
-  /*   margin-bottom: 18px;
-  padding-bottom: 10px; */
   padding-bottom: 10px; }
 
 .box-img-kommand {
@@ -887,7 +887,9 @@ h4.command_prof {
   background-color: #c29d0b;
   color: #fff; }
 
-/*   оформить блока портфолио  */
+.block-darken {
+  min-height: 128px; }
+
 /* начало блока портфолио */
 #filters {
   margin: 10px 0 20px;
@@ -980,11 +982,11 @@ h4.command_prof {
 .portfolio:hover img {
   top: 0;
   -webkit-transform: scale(1.35, 1.35);
-  -ms-transform: scale(1.35, 1.35);
-  transform: scale(1.35, 1.35);
+      -ms-transform: scale(1.35, 1.35);
+          transform: scale(1.35, 1.35);
   -webkit-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
-  transform-origin: 100% 0; }
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0; }
 
 /* конец блока портфолио */
 .inner-testimonial {
@@ -1032,7 +1034,7 @@ p.adwice_text {
   width: 25%; }
 
 .animate-number-block-fon {
-  min-height: 230px; }
+  min-height: 204px; }
 
 .animate-number-block {
   width: 100%;
@@ -1082,16 +1084,18 @@ p.adwice_text {
 /* оформление Блок с ценами  */
 .price-block {
   width: 100%;
-  border: 1px solid #000;
+  border: 2px solid #f1c40f;
   padding: 17px 0; }
 
 .price-block-gray {
-  background-color: #999;
+  background-color: #000;
   padding: 10px 5px;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
 
 .price-block-gray_title, .price-block-gray_price {
-  font-size: 1.925em;
+  font-size: 1.825em;
+  text-align: center;
   line-height: 1.5;
   text-transform: uppercase;
   font-family: "RobotoSlabBold", sans-serif; }
@@ -1105,8 +1109,8 @@ p.adwice_text {
   font-variant: small-caps; }
 
 .price-block-gray_border {
-  width: 90%;
-  border-bottom: 1px solid #222;
+  width: 100%;
+  border-bottom: 1px solid #f1c40f;
   margin: 10px 0 20px 0; }
 
 .price-block-gray_list {
@@ -1114,47 +1118,43 @@ p.adwice_text {
 
 .price-block-gray_list ul {
   list-style-type: none;
-  padding-left: 20px; }
+  padding: 0 10px; }
 
 .price-block-gray_list ul li {
   font-size: .8em;
   text-transform: capitalize;
   padding: 4px 0;
   color: #666;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  position: relative;
+  width: 100%; }
 
+/*
 .price-block-gray_list .fa {
-  margin-right: 5px; }
-
+  margin-right: 5px;
+}
+ */
 .price-block-gray_buttons {
   width: 200px;
   margin: 10px auto; }
 
-.price-block-gray_buttons a {
-  padding: 5px 10px;
-  text-align: center;
-  display: block;
-  text-transform: uppercase;
-  border: 2px solid #000;
-  color: #000;
-  text-decoration: none;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
+.price_mark {
+  position: absolute;
+  right: 0;
+  bottom: 5px; }
 
-.price-block-gray_buttons a:hover {
-  border: 2px solid #fff;
-  padding: 5px 10px;
-  background-color: #fff; }
+.price_mark .fa-check {
+  color: green; }
+
+.price_mark .fa-times {
+  color: red; }
 
 /* слайдер брендов */
 .inner-testimonial {
   text-align: center; }
 
 .brand_box-img {
-  /*  // margin: 5px auto 15px; */
-  border: 3px solid #f1c40f;
-  /*   box-shadow: 0px 0px 0px 3px #f2f2f2, 0px 0px 0px 6px #f1c40f; */ }
+  border: 3px solid #f1c40f; }
 
 .brand_box-img img {
   display: block;
@@ -1209,15 +1209,16 @@ p.adwice_text {
   display: inline-block;
   font-size: .8em;
   border: 1px solid #000;
+  background-color: #f1c40f;
   padding: 7px 12px;
   color: #000;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 
 .blog-block-buttons a:hover {
-  background-color: #f1c40f; }
+  background-color: #ffffff; }
 
 .ymap-container {
   position: relative;
@@ -1227,8 +1228,7 @@ p.adwice_text {
   background: url("../images/yandex-before-load.png") #ffffff no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
-  -ms-background-size: cover;
-  background-size: cover; }
+          background-size: cover; }
 
 #map-yandex {
   position: relative;
@@ -1256,8 +1256,7 @@ p.adwice_text {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.55); }
 
-.loader:after,
-.loader:before {
+.loader:after, .loader:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -1275,7 +1274,7 @@ p.adwice_text {
   height: 48px;
   content: '';
   -webkit-animation: rotation 1s linear infinite;
-  animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
   border: solid 8px #ffffff;
   border-left-color: transparent;
   -webkit-border-radius: 50%;
@@ -1314,6 +1313,18 @@ p.adwice_text {
 .get-info {
   background-color: #222; }
 
+.get-info_row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.get-info_left {
+  width: 34%; }
+
+.get-info_right {
+  width: 66%; }
+
 .block-get-info {
   width: 100%;
   padding: 10px;
@@ -1330,7 +1341,8 @@ p.adwice_text {
 .block-get-info-text_title {
   font-size: 1.125em;
   position: relative;
-  color: #fff; }
+  color: #fff;
+  margin-bottom: 15px; }
 
 .block-get-info-text_title:before {
   content: "";
@@ -1340,7 +1352,6 @@ p.adwice_text {
   border-bottom: 2px solid #f1c40f; }
 
 .block-get-info-text_adress {
-  margin-top: 15px;
   font-size: .805em; }
 
 /*стили кнопки наверх*/
@@ -1657,278 +1668,107 @@ content: '\f095';
 
 .forms-call {
   width: 100%;
-  margin: 0 auto;
   padding: 0;
   border: 0;
-  overflow: hidden; }
-
-.form_fon_title {
-  color: #fff;
-  text-align: center;
-  /*  // font-size: $size; */
-  font-size: 1.5625rem; }
-
-.form_fon_title span {
-  text-transform: uppercase; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 .forms-call label {
   margin: 10px 0;
   display: block; }
 
-.submit {
+.label_text {
+  width: 48%; }
+
+.label_textarea {
+  width: 100%; }
+
+.label_text input,
+.label_textarea textarea {
   display: block;
-  width: 90%;
-  margin: 10px auto 0;
-  height: 40px;
-  line-height: 40px;
-  /* 	font-weight: bold; */
-  /* 	// background-color: $color_button; */
-  color: #fff;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  width: 100%; }
 
-.submit:hover {
-  /* 	background-color: $color_hoverbutton; */ }
+.label_textarea textarea {
+  height: 150px;
+  font-size: .95rem; }
 
-.form_info {
-  color: #7E7E7E;
-  width: 80%;
-  margin: 20px auto;
-  /*  // font-size: $size; */
-  font-size: 0.75rem; }
+.footer_call {
+  width: 100%;
+  text-align: right; }
 
-.checkbox_box {
-  margin: 10px auto;
-  width: 90%;
-  padding: 0;
-  color: #fff; }
+.footer_call .block_mini_link {
+  border: 1px solid #f1c40f; }
 
-.big_form_case .checkbox_box {
-  margin: 10px auto;
-  width: 38%; }
+.footer_call .block_mini_link:hover {
+  border: 1px solid #fffffff; }
 
-.radioterms {
-  width: 10%;
-  float: left;
-  margin-top: 10px; }
-
-.link_form {
-  float: right;
-  color: #95989A;
-  width: 87%;
-  top: -6px;
-  /*  // font-size: $size; */
-  font-size: 0.625rem;
-  position: relative; }
-
-.link_form:before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  border-bottom: 1px dashed #95989A;
-  top: 112%;
-  width: 78%; }
-
-.form_fon_mphone .link_form:before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  border-bottom: 1px dashed #95989A;
-  top: 112%;
-  width: 58%; }
-
-.link_form a {
-  color: #95989A;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-
-.link_form a:hover .link_form:before {
-  border-bottom: 1px dashed #fff; }
-
-.big_form_case .link_form a {
-  color: #ffffff; }
-
-.big_form_case .link_form:before {
-  border-bottom: 1px dashed #ffffff;
-  width: 81%; }
-
-.form_fon_mphone .form_fon_title {
-  margin-bottom: 15px; }
-
-.form_fon_mphone .form_fon_title,
-.form_fon_mphone .form_fon_title span {
-  color: #000; }
-
-.form_fon_mphone .link_form a:hover {
-  /* 	color: $grey_color; */ }
-
-/*
-стилизую форму всплывашку для обратной связи */
-.form-callback_iner {
-  /* 	background-color:$color_button; */
-  padding-top: 20px; }
-
-.fcb {
-  margin: 0;
-  padding: 0;
-  /* 	background-color:$color_button; */ }
-
-.form-callback_item {
-  float: right;
-  margin-top: -1px;
-  padding-top: 15px;
-  width: 50%;
-  /* 	background-color:$color_button; */ }
-
-.b_item {
-  float: left;
-  width: 50%;
-  margin: 20px auto 0;
-  height: 261px;
-  text-align: center;
-  /* 	background: $color_button url('../images/septik-ergobox_327.png') center center no-repeat; */
-  -webkit-background-size: 286px 261px;
-          background-size: 286px 261px; }
-
-.form-callback_item .input_form {
-  /* color: $grey_color; */
-  font-size: 0.95rem; }
-
-.label_name {
-  margin-left: 5%; }
-
-.form-callback .button-call {
-  float: none;
-  text-align: center;
-  color: #fff;
-  margin-top: 20px; }
-
-.form-callback .link_form a {
-  color: #fff; }
-
-.form-callback .link_form:before {
-  border-bottom: 1px dashed #fff;
-  width: 75%; }
-
-/*
-стилизую кнопки закрытия формы */
-.forms-call .mfp-close {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  opacity: 1;
-  width: 30px;
+.label_text input {
   height: 30px;
   line-height: 30px;
+  text-indent: 5px;
+  font-size: .95rem; }
+
+.checkbox_box {
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  text-align: right; }
+
+.checkbox_box input[type="checkbox"] {
+  margin-left: 0;
+  padding: 0; }
+
+.checkbox_box input[type="checkbox"].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  border: 0; }
+
+.checkbox_box input[type="checkbox"].css-checkbox + label.css-label {
+  background-image: url("../images/checkbox_yes_white.png");
+  padding-left: 22px;
+  display: inline-block;
+  line-height: 15px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+  color: #dedede;
   /*  // font-size: $size; */
-  font-size: 1.875rem;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  /* 	background-color: $grey_color; */
-  border: 1px solid #fff;
-  -webkit-transition: all .75s ease;
-  -o-transition: all .75s ease;
-  transition: all .75s ease; }
+  font-size: 0.75rem;
+  line-height: 1.25; }
 
-.forms-call .mfp-close:hover {
-  color: #1a1a1a; }
+.checkbox_box input[type="checkbox"].css-checkbox + label.css-label:hover {
+  opacity: 1.0; }
 
-/*
-стили оформления всплывашки политика кон */
-.politiks_popup {
-  background-color: transparent;
-  padding: 15px;
-  position: relative;
-  -webkit-transition: all 0.5s else;
-  -o-transition: all 0.5s else;
-  transition: all 0.5s else;
-  color: #000;
-  max-width: 750px;
-  margin: auto; }
+.checkbox_box input[type="checkbox"]:checked + label.css-label {
+  background-image: url("../images/checkbox_no_white.png"); }
 
-.politiks_popup_block {
-  padding: 10px;
-  background-color: #fff; }
-
-.politiks_popup_block h4 {
-  /*  // font-size: $size; */
-  font-size: 1.25rem;
-  text-align: center;
-  text-transform: uppercase; }
-
-.politiks_popup_block h5 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-left: 10px;
-  padding-bottom: 5px; }
-
-.politiks_popup_block p {
-  /*  // font-size: $size; */
-  font-size: 0.875rem; }
-
-.politiks_popup_block ul {
-  padding: 0 0 0 10px;
-  font-weight: bold;
-  /*  // font-size: $size; */
-  font-size: 1rem;
-  padding-bottom: 5px; }
-
-.politiks_popup_block ul li {
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-  font-weight: normal;
-  /*  // font-size: $size; */
-  font-size: 0.875rem; }
-
-.politiks_popup_block ul li ul li {
-  list-style-type: disc; }
-
-.politiks_popup_block ul li span {
-  font-weight: bold; }
-
-.fc-avtorpolit {
-  text-align: right;
-  font-size: 1rem; }
-
-.fc-avtorpolit a,
-.politiks_popup_block ul li a {
-  color: #FF9900;
-  text-decoration: none;
+.css-label a {
+  color: #dedede;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
-.politiks_popup_block ul li a:hover,
-.politiks_popup_block a:hover {
-  text-decoration: underline; }
+.css-label a:hover {
+  color: #b2b0b0; }
 
-.politiks_popup_block .mfp-close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  padding: 0;
-  width: 30px;
-  font-size: 30px;
-  height: 30px;
-  line-height: 23px;
-  opacity: .7;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid #FF7800;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
-
-.politiks_popup_block .mfp-close:hover {
-  opacity: 1.0; }
+.form-callback .checkbox_box {
+  padding-top: 10px;
+  width: 100%; }
 
 /* // переписать */
 .forms-calldecor {
