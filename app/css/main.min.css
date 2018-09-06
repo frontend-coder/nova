@@ -1129,11 +1129,6 @@ p.adwice_text {
   position: relative;
   width: 100%; }
 
-/*
-.price-block-gray_list .fa {
-  margin-right: 5px;
-}
- */
 .price-block-gray_buttons {
   width: 200px;
   margin: 10px auto; }
@@ -1385,34 +1380,21 @@ p.adwice_text {
 
 /* оформление футера  */
 .footer-border-top {
-  border-top: 1px solid #fff; }
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  text-align: center; }
 
 footer {
   background-color: #222;
   color: #737373; }
 
-.footer-social {
-  text-align: center; }
+.footer-border-top .top_line_social ul li a {
+  background-color: #f1c40f;
+  color: #222222; }
 
-.footer-social ul li {
-  display: inline-block;
-  list-style-type: none; }
-
-.footer-social ul li a {
-  display: block;
-  color: #fff;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  -webkit-border-radius: 10em;
-          border-radius: 10em;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s; }
-
-.footer-social ul li a:hover {
-  color: #000;
-  background-color: #f1c40f; }
+.footer-border-top .top_line_social ul li a:hover {
+  background-color: #fff;
+  color: #222222; }
 
 footer p {
   line-height: 1.24em;
@@ -1420,92 +1402,72 @@ footer p {
   color: #444;
   text-align: center; }
 
-.mn {
-  border: 1px solid red; }
+.copyright_line {
+  position: relative;
+  margin: 10px; }
 
-/* // задать все переменные
- */
-/* p {
-  @include font-size(20px);
- } */
-/* p {
-  @include trans;
- } */
-/*
-как перевести размеры контейнеров из пикселей
-в rem */
-/* .divigin {
-  width: pxrem(30px);
-}
-content: '\f095';
-    font-family: "FontAwesome";
+.copyright_line a {
+  color: #737373;
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s; }
 
-*/
-/* если ширина контейнеров в % а отступы в пикселях
-20 пикселей - один отступ
- */
-/* .grid-item {
-  width: calc((100% - 20px * 2) / 3);
-}
- */
-/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
-/* .grid-item:nth-child(3n+3) {
-  margin-right: 0;
-  float: right;
-} */
-/* как использовать
-.nameclass {
- @include triangle(25px, up, red);
-  @include triangle(25px, down, red);
-   @include triangle(100px, left, red);
-    @include triangle(100px, right, red);
-}
- */
-/* как использовать
-.nameclass {
- @include trianglelong(25px,40px, up, red);
- @include trianglelong(25px,40px, down, red);
- @include trianglelong(25px,40px, left, red);
- @include trianglelong(25px,40px, right, red);
+.copyright_line a:hover {
+  text-decoration: underline; }
 
-}
- */
-/* как создать треугольник легкий способ */
-/* как использовать
-.nameclass {
- @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
-@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
-@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
-@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+.acc-container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #f1c40f; }
 
- */
-/* как использовать
-.nameclass {
- @include triangle_in_corner(25px, topleft, red);
-    @include triangle_in_corner(100px, topright, red);
+.acc-btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 25px;
+  cursor: pointer;
+  background: #f1c40f;
+  color: #000;
+  border-bottom: 1px solid #f1c40f; }
 
- @include triangle_in_corner(25px, bottomleft, red);
-  @include triangle_in_corner(25px, bottomright, red);
+.acc-content {
+  height: 0px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f2f2f2; }
 
-}
- */
-/*все переменные и моды */
-/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
-/* как сделать миксинг */
-/*  @mixin large-text {
-   font: {
-     family: Arial;
-     size: 20px;
-    weight: bold;
-   }
-  color: #ff0000;
- } */
-/* как использовать миксинг */
-/*  .page-title {
-  @include large-text;
-  padding: 4px;
+.acc-content-inner {
+  padding: 30px; }
+
+.acc-content-inner a {
+  display: block;
+  color: #798795;
   margin-top: 10px;
- } */
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s; }
+
+.acc-content-inner a:hover {
+  text-decoration: underline; }
+
+.open {
+  height: auto; }
+
+.acc-btn h1 {
+  color: #000;
+  font-size: 1.5rem; }
+
+.acc-content-inner p {
+  color: #798795; }
+
+.acc-btn.selected {
+  color: red;
+  background-color: #f1c40f; }
+
+.acc-btn h1.selectev {
+  color: #ffffff; }
+
 /* // задать все переменные
  */
 /* p {
@@ -1886,5 +1848,156 @@ content: '\f095';
 :focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
 :focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
 :focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+}
+content: '\f095';
+    font-family: "FontAwesome";
+
+*/
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+@media (min-width: 737px) {
+  .container {
+    width: 100%;
+    margin: 0 auto; } }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin: 0 auto; } }
+
+@media (min-width: 800px) {
+  .container {
+    width: 780px;
+    margin: 0 auto; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    margin: 0 auto; } }
+
+@media (min-width: 1024px) {
+  .container {
+    width: 1004px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 1060px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 1190px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto; } }
+
+/* ниже размещено стили оформления наполнения шаблона в
+зависимостиь от разрешения, в документ были вклюены все разрешения
+не зависомо от требования заказчика  */
+@media only screen and (max-width: 1190px) {
+  .mobile_gamburger {
+    display: block; }
+  .top_line_menu {
+    display: none; } }
+
+/* первое разрешение под казачика */
+@media only screen and (max-width: 768px) {
+  .mobile_gamburger {
+    display: block; }
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
+/* end  (max-width: 768px) */
 
 /*# sourceMappingURL=main.min.css.map */

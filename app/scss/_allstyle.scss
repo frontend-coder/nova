@@ -505,7 +505,7 @@ p.adwice_text {
 
 .price-block-gray_title, .price-block-gray_price {
   font-size: 1.825em;
- text-align: center;
+  text-align: center;
   line-height: 1.5;
   text-transform: uppercase;
   font-family: "RobotoSlabBold", sans-serif;
@@ -546,22 +546,10 @@ p.adwice_text {
   width: 100%;
 }
 
-
-/*
-.price-block-gray_list .fa {
-  margin-right: 5px;
-}
- */
 .price-block-gray_buttons {
   width: 200px;
   margin: 10px auto;
 }
-
-
-
-
-
-
 
 .price_mark {
   position: absolute;
@@ -570,11 +558,11 @@ p.adwice_text {
 }
 
 .price_mark .fa-check {
-color: green;
+  color: green;
 
 }
 .price_mark .fa-times {
-color: red;
+  color: red;
 }
 
 /* слайдер брендов */
@@ -641,7 +629,7 @@ color: red;
   display: inline-block;
   font-size: .8em;
   border: 1px solid #000;
-   background-color: #f1c40f;
+  background-color: #f1c40f;
   padding: 7px 12px;
   color: #000;
   text-decoration: none;
@@ -660,7 +648,7 @@ color: red;
   cursor: pointer;
   background: url("../images/yandex-before-load.png") #ffffff no-repeat;
   background-position: center center;
-   background-size: cover;
+  background-size: cover;
 }
 
 #map-yandex {
@@ -683,10 +671,6 @@ color: red;
   height: 100%;
   overflow: hidden;
   color: #000000;
-  -webkit-transition: opacity .7s ease;
-  -moz-transition: opacity .7s ease;
-  -o-transition: opacity .7s ease;
-  -ms-transition: opacity .7s ease;
   transition: opacity .7s ease;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.55);
@@ -755,28 +739,18 @@ color: red;
   background-color: #222;
 }
 
-
-
 .get-info_row {
 
   display: flex;
 }
 
 .get-info_left {
-width: 34%;
+  width: 34%;
 }
 
 .get-info_right {
-width: 66%;
+  width: 66%;
 }
-
-
-
-
-
-
-
-
 
 .block-get-info {
   width: 100%;
@@ -846,6 +820,8 @@ width: 66%;
 /* оформление футера  */
 .footer-border-top {
   border-top: 1px solid #fff;
+  padding-top: 10px;
+  text-align: center;
 }
 
 footer {
@@ -853,30 +829,14 @@ footer {
   color: #737373;
 }
 
-.footer-social {
-  text-align: center;
-}
-
-.footer-social ul li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.footer-social ul li a {
-  display: block;
-  color: #fff;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 10em;
-  -moz-transition: all 0.5s ease 0.1s;
-  -webkit-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s;
-}
-
-.footer-social ul li a:hover {
-  color: #000;
+.footer-border-top .top_line_social ul li a {
   background-color: #f1c40f;
+  color:  #222222;
+}
+
+.footer-border-top .top_line_social ul li a:hover {
+  background-color: #fff;
+  color:  #222222;
 }
 
 footer p {
@@ -886,32 +846,74 @@ footer p {
   text-align: center;
 }
 
-.mn {
-  border: 1px solid red;
+.copyright_line {
+  position: relative;
+  margin: 10px;
 }
 
+.copyright_line a {
+ color: #737373;
+ transition: all 0.5s ease 0.1s;
+}
 
+.copyright_line a:hover {
+  text-decoration: underline;
+}
 
+.acc-container {
+  width:90%;
+  margin:0 auto;
+  overflow:hidden;
+  border: 2px solid #f1c40f;
+}
 
+.acc-btn {
+  width:100%;
+  margin:0 auto;
+  padding:10px 25px;
+  cursor:pointer;
+  background: #f1c40f;
+  color: #000;
+  border-bottom: 1px solid #f1c40f;
+}
 
+.acc-content {
+  height:0px;
+  width:100%;
+  margin:0 auto;
+  overflow:hidden;
+  background:#f2f2f2;
+}
 
+.acc-content-inner {
+  padding:30px;
+}
 
+.acc-content-inner a {
+  display: block;
+ color:#798795;
+margin-top: 10px;
+ transition: all 0.5s ease 0.1s;
+}
+.acc-content-inner a:hover {
+text-decoration: underline;
+}
+.open {
+  height: auto;
+}
+.acc-btn h1 {
+  color: #000;
+    font-size: 1.5rem;
+}
+.acc-content-inner p {
+  color:#798795;
+}
+.acc-btn.selected {
+  color:red;
+  background-color: #f1c40f;
+}
 
+.acc-btn h1.selectev {
+  color:#ffffff;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

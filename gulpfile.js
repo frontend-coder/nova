@@ -83,7 +83,7 @@ gulp.task('scripts', function () {
  return gulp.src([
 'app/libs/jquery/jquery-2.2.4.min.js',
 // 'app/libs/jquery/jquery-migrate-1.2.1.min.js',
-'app/libs/nicescroll/jquery.nicescroll.min.js',
+// 'app/libs/nicescroll/jquery.nicescroll.min.js',
 'app/libs/jQuery-Mask/jquery.mask.min.js',
 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/jquery.PageScroll2id/jquery.PageScroll2id.min.js',

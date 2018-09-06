@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$("body").niceScroll({
-horizrailenabled:false
-});
+// 	$("body").niceScroll({
+// horizrailenabled:false
+// });
 // вверхнее красиво-вращающееся меню
 // 1 и 2 строка это анимация крестика
 //3 строка - слайдер вниз меню
@@ -16,7 +16,7 @@ $('.hidden-mnu').hide("slow");
 });
 
 // pagination on lending pages
-$(".top_line_menu ul li a, .hidden_mnu ul li a").mPageScroll2id({
+$(".top_line_menu ul li a").mPageScroll2id({
 layout                 : "auto",
 offset                 : ".top_line_box",
 scrollEasing           : "linear",
@@ -28,7 +28,7 @@ scrollSpeed            : 1000
 
 $(function() {
 	$("#phone_key").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
-	$("#phone_header").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
+	$("#footer_phone").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
 });
 
 // всплывающие окна обратной связи позвонить мне
@@ -109,10 +109,29 @@ nav                  : false,
 dots                 : true
 });
 
+  var animTime = 300,
+      clickPolice = false;
 
+  $(document).on('touchstart click', '.acc-btn', function(){
+    if(!clickPolice){
+       clickPolice = true;
 
+      var currIndex = $(this).index('.acc-btn'),
+          targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
 
+      $('.acc-btn').removeClass('selected');
+      $(this).addClass('selected');
 
+        $('.acc-btn h1').removeClass('selectev');
+      $(this).find('h1').addClass('selectev');
+
+      $('.acc-content').stop().animate({ height: 0 }, animTime);
+      $('.acc-content').eq(currIndex).stop().animate({ height: targetHeight }, animTime);
+
+      setTimeout(function(){ clickPolice = false; }, animTime);
+    }
+
+  });
 
 
 
