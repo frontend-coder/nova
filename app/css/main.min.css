@@ -28,6 +28,7 @@ html {
   width: 100%;
   font-size: 16px;
   line-height: 1.42;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   -webkit-backface-visibility: hidden; }
@@ -348,65 +349,9 @@ content: '\f095';
   color: #000; }
 
 .mobile_gamburger {
-  width: 50px;
-  height: 50px;
   border: #000;
   z-index: 100;
   display: none; }
-
-.toggle-mnu {
-  display: block;
-  text-align: center;
-  line-height: 48px; }
-
-.toggle-mnu {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin-top: 15px;
-  margin-right: 0; }
-
-.toggle-mnu span:after, .toggle-mnu span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 9px; }
-
-.toggle-mnu span:after {
-  top: 18px; }
-
-.toggle-mnu span {
-  position: relative;
-  display: block; }
-
-.toggle-mnu span, .toggle-mnu span:after, .toggle-mnu span:before {
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-border-radius: 3px;
-          border-radius: 3px; }
-
-.toggle-mnu.on span {
-  background-color: transparent; }
-
-.toggle-mnu.on span:before {
-  -webkit-transform: rotate(45deg) translate(-1px, 0);
-  -ms-transform: rotate(45deg) translate(-1px, 0);
-  transform: rotate(45deg) translate(-1px, 0); }
-
-.toggle-mnu.on span:after {
-  -webkit-transform: rotate(-45deg) translate(6px, -7px);
-  -ms-transform: rotate(-45deg) translate(6px, -7px);
-  transform: rotate(-45deg) translate(6px, -7px); }
-
-.toggle-mnu.on + #menu {
-  opacity: 1;
-  visibility: visible; }
 
 /* оформление главного меню сайта   */
 .top_line_menu {
@@ -414,11 +359,12 @@ content: '\f095';
   margin: 0; }
 
 .top_line_menu ul li {
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 
 .top_line_menu ul li a {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   line-height: 1.2;
   position: relative;
   font-family: "RobotoSlabBold", sans-serif;
@@ -433,6 +379,28 @@ content: '\f095';
 
 .top_line_menu ul li a:hover {
   color: #f1c40f; }
+
+.top_line_menu ul li ul {
+  background: #000000;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-transform: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 57px;
+  margin-top: 20px;
+  height: auto;
+  min-width: 280px;
+  width: 100%; }
+
+.parent:hover .top_line_menu ul li ul {
+  visibility: visible; }
 
 /* оформление содержимого над самой нартикой ниже top line */
 .title-header {
@@ -1946,6 +1914,11 @@ content: '\f095';
     width: 780px;
     margin: 0 auto; } }
 
+@media (min-width: 980px) {
+  .container {
+    width: 960px;
+    margin: 0 auto; } }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -1976,9 +1949,125 @@ content: '\f095';
 не зависомо от требования заказчика  */
 @media only screen and (max-width: 1190px) {
   .mobile_gamburger {
-    display: block; }
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /*     overflow: hidden; */ }
   .top_line_menu {
-    display: none; } }
+    display: none; }
+  .clickhere {
+    margin-right: 60px;
+    margin-top: 10px;
+    color: #000000;
+    font-size: 12px; }
+  .menubtn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 10px;
+    position: absolute; }
+  .menubtn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background: #000;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; }
+  .menubtn span::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 8px;
+    background: #000;
+    -webkit-transition: all 100ms ease;
+    -o-transition: all 100ms ease;
+    transition: all 100ms ease; }
+  .menubtn span::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 16px;
+    background: #000;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; }
+  .menubtn.opened span {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    top: 7px; }
+  .menubtn.opened span::before {
+    opacity: 0; }
+  .menubtn.opened span::after {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    top: 0px; }
+  .navmenu {
+    width: 240px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; }
+  .navmenu.opened {
+    visibility: visible;
+    opacity: 1; }
+  .navmenu::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 7px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+  .navmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .navmenu ul.text-list {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .navmenu ul.text-list li a {
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #343434;
+    font-weight: 600;
+    display: block;
+    line-height: 27px;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease; }
+  .navmenu ul.text-list li a:hover {
+    color: #f1c40f; }
+  .navmenu ul.text-list ul {
+    margin-left: 15px; } }
 
 /* первое разрешение под казачика */
 @media only screen and (max-width: 768px) {

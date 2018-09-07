@@ -52,71 +52,21 @@
   background-color: $acsent-yellow-color;
   color: #000;}
 .mobile_gamburger  {
-  width: 50px;
-  height: 50px;
   border: #000;
   z-index: 100;
   display: none; }
-.toggle-mnu {
-  display: block;
-  text-align:center;
-  line-height:48px;
-}
-.toggle-mnu{
-  display:block;
-    width:50px;
-    height:50px;
-    margin-top:15px;
-    margin-right: 0;
-  }
-  .toggle-mnu span:after, .toggle-mnu span:before {
-    content:"";
-    position:absolute;
-    left:0;
-    top:9px;
-  }
-  .toggle-mnu span:after {
-    top:18px;
-  }
-  .toggle-mnu span{
-    position:relative;
-    display:block;
-  }
-  .toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before {
- width:100%;
- height:3px;
- background-color:#000;
- transition:all .3s;
- backface-visibility:hidden;
- border-radius:3px;
- }
- .toggle-mnu.on span {
-   background-color:transparent;
- }
- .toggle-mnu.on span:before {
-  -webkit-transform:rotate(45deg) translate(-1px,0);
-   -ms-transform:rotate(45deg) translate(-1px,0);
-   transform:rotate(45deg) translate(-1px,0);
- }
- .toggle-mnu.on span:after {
- -webkit-transform:rotate(-45deg) translate(6px,-7px);
-    -ms-transform:rotate(-45deg) translate(6px,-7px);
-    transform:rotate(-45deg) translate(6px,-7px);
-  }
- .toggle-mnu.on+#menu {
- opacity:1;visibility:visible;
- }
+
  /* оформление главного меню сайта   */
  .top_line_menu {
  padding: 0;
    margin: 0;
  }
  .top_line_menu ul li {
- display: inline-block;
+ display: inline-block;position: relative;
  }
  .top_line_menu ul li a {
  text-align: center;
- font-size: 0.8em;
+ font-size: 0.8rem;
  line-height: 1.2;
  position: relative;
  font-family: "RobotoSlabBold", sans-serif;
@@ -129,6 +79,34 @@
  .top_line_menu ul li a:hover {
  color: #f1c40f;
 }
+
+.top_line_menu ul li ul {
+    background: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    text-transform: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 57px;
+    margin-top: 20px;
+    height: auto;
+    min-width: 280px;
+    width: 100%;}
+
+
+ .parent:hover .top_line_menu ul li ul {
+visibility: visible;
+  }
+
+
+
+
  /* оформление содержимого над самой нартикой ниже top line */
  .title-header {
  padding:20% 0;
@@ -195,3 +173,12 @@ border:2px solid #000;
 background-color:  $acsent-yellow-color;
 border:2px solid $acsent-yellow-color;
 }
+
+
+
+
+
+
+
+
+
