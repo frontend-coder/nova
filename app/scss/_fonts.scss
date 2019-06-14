@@ -16,7 +16,7 @@
 	url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
 	url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
 	font-style: normal;
-	font-weight: normal;}
+	font-weight: 500;}
 
 @font-face {
 	font-family: "RobotoSlabBold";
@@ -24,7 +24,7 @@
 	url("../fonts/RobotoSlabBold/RobotoSlabBold.woff") format("woff"),
 	url("../fonts/RobotoSlabBold/RobotoSlabBold.ttf") format("truetype");
 	font-style: normal;
-	font-weight: normal;}
+	font-weight: 800;}
 
 @font-face {
 	font-family: "RobotoSlabRegular";
@@ -33,3 +33,27 @@
 	url("../fonts/RobotoSlabRegular/RobotoSlabRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;}
+
+
+
+// 100 Extra Light or Ultra Light
+// 200 Light or Thin
+// 300 Book or Demi
+// 400 Normal or Regular
+// 500 Medium
+// 600 Semibold, Demibold
+// 700 Bold
+// 800 Black, Extra Bold or Heavy
+// 900 Extra Black, Fat, Poster or Ultra Black
+
+
+// 100 — тонкое начертание;
+// 200 — сверхсветлое;
+// 300 — светлое;
+// 400 — нормальное (аналогично normal);
+// 500 — среднее;
+// 600 — полужирное;
+// 700 — жирное (аналогично bold);
+// 800 — сверхжирное;
+// 900 — тяжёлое.
+// https://webfonts.pro/

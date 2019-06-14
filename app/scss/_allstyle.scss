@@ -187,9 +187,9 @@ header */
   padding-bottom: 10px;
 }
 .box-img-kommand {
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 .box-img-kommand img {
   width: 100%;
@@ -237,7 +237,7 @@ h4.command_prof {
 
 /*  блок почему выбирают нас */
 .why_choice_items {
-	width: 50%;
+  width: 50%;
 }
 
 .why_choice_items img {
@@ -250,7 +250,7 @@ h4.command_prof {
 /*   оформить блока ничего лучше чем видео презентация */
 
 .block-video_fon {
-  background: #000 url(../images/video-bg.jpg) top center no-repeat fixed;
+  background: #000 url(../img/video-bg.jpg) top center no-repeat fixed;
   min-height: 350px;
   background-size: cover;
   position: relative;
@@ -301,10 +301,10 @@ h4.command_prof {
 
 /* начало блока портфолио */
 #filters {
-	margin:10px 0 20px;
-	text-align: center;
-	padding:0;
-	list-style:none;
+  margin:10px 0 20px;
+  text-align: center;
+  padding:0;
+  list-style:none;
 }
 
 #filters li {
@@ -334,14 +334,14 @@ h4.command_prof {
 }
 
 #portfoliolist .portfolio {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	width:25%;
-	margin:0;
-	display:none;
-	float:left;
-	overflow:hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width:25%;
+  margin:0;
+  display:none;
+  float:left;
+  overflow:hidden;
 }
 
 .portfolio-wrapper {
@@ -646,7 +646,7 @@ p.adwice_text {
   margin: 0;
   overflow: hidden;
   cursor: pointer;
-  background: url("../images/yandex-before-load.png") #ffffff no-repeat;
+  background: url("../img/yandex-before-load.png") #ffffff no-repeat;
   background-position: center center;
   background-size: cover;
 }

@@ -172,7 +172,7 @@ padding: 0px;
 border: 0; }
 
 .checkbox_box input[type="checkbox"].css-checkbox + label.css-label {
-background-image: url("../images/checkbox_yes_white.png");
+background-image: url("../img/checkbox_yes_white.png");
 padding-left: 22px;
 display: inline-block;
 line-height: 15px;
@@ -186,7 +186,7 @@ line-height: 1.25; }
 .checkbox_box input[type="checkbox"].css-checkbox + label.css-label:hover {
 opacity: 1.0; }
 .checkbox_box input[type="checkbox"]:checked + label.css-label {
-background-image: url("../images/checkbox_no_white.png"); }
+background-image: url("../img/checkbox_no_white.png"); }
 .css-label a {
 color: #dedede;
 @include trans;

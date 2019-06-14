@@ -1,88 +1,85 @@
+@import "var";
+
+// эти свойства по default
 *::-webkit-input-placeholder {
 color:#202020;
 opacity: 1;
 }
-*:-moz-placeholder {
-color:#202020;
-	opacity: 1;
-}
+
 *::-moz-placeholder {
-color:#202020;
+color: $placeholdercolortext;
 	opacity: 1;
 }
-*:-ms-input-placeholder {
-color:#202020;
+*::-ms-input-placeholder {
+color: $placeholdercolortext;
 	opacity: 1;
 }
-*, *:before, *:after {
-  box-sizing: border-box;
-   outline:none;
-   padding: 0;
-  margin: 0;
+::placeholder {
+	color: $placeholdercolortext;
 }
+
+::selection {
+	background-color: $accent_color;
+	color: $white_color;
+}
+
+@import "fonts";
 
 html{
-box-sizing: border-box;
 width: 100%;
-font-size: 16px;
-line-height: 1.42;
-overflow-x: hidden;
+/* height: 100%; */
+font-size: $body_fontsize;
+line-height: $body_lineheight;
 margin:0;
 padding:0;
 -webkit-backface-visibility:hidden;
+/* overflow-x: hidden; */
 }
+
 body {
-font-family: "RobotoRegular", sans-serif;
-font-size: 16px;
-line-height: 1.42;
-position: relative;
-min-width: 320px;
-height: 100%;
-margin:0;
-padding:0;
-color: #000000;
-opacity: 1;
--webkit-backface-visibility:hidden;
--webkit-font-smoothing:antialised;
-overflow-x: hidden;
-}
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-
-}
-body input:required:valid,
-body textarea:required:valid {
-
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0; }
-a {
-	outline: 0;
-	text-decoration:none;
-}
-ul{
-	margin:0;
-	padding:0;
-}
-
-li{
-	list-style-type:none;
+	font-size: $body_fontsize;
+	min-width: 320px;
+	opacity: 1;
+	position: relative;
+	line-height: $body_lineheight;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $body_color_text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
 }
 
 .img-responsive {
 	display: block;
-width: 100%;
+	max-width: 100%;
 	height: auto;
-}
-.hidden {
-	display: none;
+	&.img-width {
+		width: 100%;
+	}
 }
 
-@import '_fonts.scss';
-@import '_header.scss';
-@import '_allstyle.scss';
-@import '_vseforms.scss';
-@import '_media.scss';
+
+@import "header"; // стили шапки сайта
+@import "allstyle"; // стили шапки сайта
+
+@import "vseforms"; // стили шапки сайта
+@import "footer"; // стили шапки сайта
+@import "media"; // Always at the end
+
+
+
+
+
+
+
+
+
+
