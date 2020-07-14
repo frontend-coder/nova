@@ -29,11 +29,13 @@ $(document).ready(function () {
 	$('.top_line_menu ul li a, .text-list li a').mPageScroll2id({
 		layout: 'auto',
 		offset: '.top_line_box',
+		autoScrollSpeed: true,
+		scrollSpeed: 1000,
 		scrollEasing: 'linear',
 		highlightByNextTarget: true,
 		keepHighlightUntilNext: true,
-		autoScrollSpeed: true,
-		scrollSpeed: 1000
+		highlightSelector: '.menu_hightlight ul li a'
+
 	});
 
 	$(function () {

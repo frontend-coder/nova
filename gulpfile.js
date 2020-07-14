@@ -41,8 +41,8 @@ function styles() {
 		.pipe(concat('libs.css'))
 		.pipe(rename('libs.min.css'))
 		.pipe(autoprefixer({
-			overrideBrowserlist: ['last 10 versions'],
-			grid: true
+		//	overrideBrowserlist: ['last 10 versions'],
+			grid: 'autoplace'
 		}))
 		.pipe(stripCssComments())
 		.pipe(cleancss(({

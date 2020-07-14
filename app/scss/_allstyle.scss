@@ -101,6 +101,7 @@ h2.block_title:after {
   font-size: 1.2em;
   text-transform: uppercase;
   margin-bottom: 35px;
+  font-weight: normal;
 }
 
 .creat-block-title span {
@@ -205,6 +206,7 @@ h2.block_title:after {
   color: #fff;
   font-size: 2.18rem;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 /*
@@ -228,13 +230,18 @@ h2.block_title:after {
   width: 100%;
   height: auto;
   border-radius: 0;
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+.box-img-kommand-wrap,
+.box-img-kommand-wrap .box-img-kommand img {
+  transition: all 0.5s ease;
 }
 
 .box-img-kommand-wrap:hover .box-img-kommand img {
-  transform: scale(1.35, 1.35);
-  transition: all 0.5s ease 0.1s;
-  transform-origin: 30% 0;
+  transform: scale(1.35, 1.35) translateY(16%);
+  // transition: all 0.5s ease 0.1s;
+  // transform-origin: 30% 0;
 }
 
 h3.command_name {
@@ -396,9 +403,8 @@ h4.command_prof {
 
 .project-cards {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .project-cards .portfolio {
@@ -518,6 +524,10 @@ p.adwice_text {
 
 .animate-number-block-fon {
   min-height: 204px;
+}
+
+.animate-number-block-fon h2 {
+  display: none;
 }
 
 .animate-number-block {
@@ -863,6 +873,7 @@ p.adwice_text {
   position: relative;
   color: #fff;
   margin-bottom: 15px;
+  font-weight: normal;
 }
 
 .block-get-info-text_title:before {
@@ -1004,11 +1015,6 @@ footer p {
 }
 
 .acc-btn.selected {
-  color: red;
-  background-color: #f1c40f;
-}
-
-.acc-btn h1.selectev {
   color: #ffffff;
-
+  background-color: #f1c40f;
 }
