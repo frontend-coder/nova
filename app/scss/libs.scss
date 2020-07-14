@@ -1,9 +1,47 @@
 @import "../libs/grid/normalise";
 @import "../libs/grid/grid";
 @import "../libs/plagins/magnific-popup/magnific-popup";
-@import "../libs/plagins/owlcarousel/assets/owl.carousel";
-@import "../libs/plagins/owlcarousel/assets/owl.theme.default";
-@import "../libs/plagins/font-awesome/css/font-awesome";
+@import "../libs/plagins/OwlCarousel/OwlCarousel/dist/assets/owl.carousel";
 
 
+@import "../libs/plagins/OwlCarousel/OwlCarousel/dist/assets/owl.theme.default";
+@import "../libs/plagins/font-awesome-4.7.0/css/font-awesome.min.css";
 
+
+.mix {
+  display: none;
+  text-align: center;
+  width: 23%;
+  margin: 1em 1%;
+  background-color: #ccc;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+button {
+  background: #666666;
+  border: none;
+  color: white;
+  padding: .65em;
+  border-radius: 5px;
+}
+
+input {
+  padding: .5em;
+}
+
+.title {
+  font-weight: 2em;
+}
