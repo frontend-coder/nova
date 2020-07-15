@@ -65,10 +65,12 @@ function browsersync() {
 function scripts() {
 	return src([
 		'app/libs/plagins/jquery.min.js',
+		'app/libs/plagins/hoverIntent.js',
+		'app/libs/plagins/superfish.js',
 		'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-		'app/libs/plagins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
 		'app/libs/plagins/OwlCarousel/OwlCarousel/dist/owl.carousel.min.js',
 		'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
+
 		'app/libs/common.js',
 	])
 		.pipe(strip())

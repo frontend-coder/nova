@@ -22,20 +22,18 @@ $(document).ready(function () {
 	$('body').on('click', function () {
 		$('.menubtn').removeClass('opened');
 		$('.navmenu').removeClass('opened');
-
 	});
 
-	// pagination on lending pages
-	$('.top_line_menu ul li a, .text-list li a').mPageScroll2id({
-		layout: 'auto',
-		offset: '.top_line_box',
-		autoScrollSpeed: true,
-		scrollSpeed: 1000,
-		scrollEasing: 'linear',
-		highlightByNextTarget: true,
-		keepHighlightUntilNext: true,
-		highlightSelector: '.menu_hightlight ul li a'
-
+	$('.top_line_menu ul').superfish({
+		delay: 300,
+		animation: {
+			opacity: 'show'
+		},
+		animationOut: {
+			opacity: 'hide'
+		},
+		speed: 'normal',
+		speedOut: 'fast',
 	});
 
 	$(function () {
