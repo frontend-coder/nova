@@ -32,17 +32,22 @@
     <div class="top_line">
       <div class="container">
         <div class="row">
-
           <div class="top_line_box">
-
             <div class="top_line_logo">
               <img src="img/logo.png" alt="логотип для сайта">
             </div>
-
-            <nav class="menu_hightlight top_line_menu">
-              <ul>
-                <li><a href="#main">главная</a></li>
-                <li class="parent"><a href="#aboutus">о нас</a></li>
+            <div class="top_line_menu menu_hightlight">
+              <ul class="sf-menu" id="nav">
+                <li>
+                  <a href="#main">главная</a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#aboutus">о нас</a>
+                  <ul>
+                    <li><a href="#">страница</a></li>
+                    <li><a href="#">страница</a></li>
+                  </ul>
+                </li>
                 <li><a href="#services">услуги</a></li>
                 <li><a href="#portfolio">портфолио</a></li>
                 <li><a href="#adwise">отзывы</a></li>
@@ -50,8 +55,7 @@
                 <li><a href="#blog">блог</a></li>
                 <li><a href="#contact">контакты</a></li>
               </ul>
-            </nav>
-
+            </div>
             <div class="top_line_social">
               <ul>
                 <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
@@ -62,28 +66,28 @@
                       aria-hidden="true"></i></a></li>
               </ul>
             </div>
-            <div class="mobile_gamburger">
-              <!--    <a href="#" class="toggle-mnu">
-                    <span></span>
-                  </a>
-              -->
-              <div class="clickhere"></div>
-              <div class="menubtn"><span></span></div>
-              <nav class="menu_hightlight navmenu">
-                <h4>Меню</h4>
-                <ul class="text-list">
-                  <li><a href="#main">главная</a></li>
-                  <li><a href="#aboutus">о нас</a>
-                  </li>
-                  <li><a href="#services">услуги</a></li>
-                  <li><a href="#portfolio">портфолио</a></li>
-                  <li><a href="#adwise">отзывы</a></li>
-                  <li><a href="#price">цены</a></li>
-                  <li><a href="#blog">блог</a></li>
-                  <li><a href="#contact">контакты</a></li>
-                </ul>
-              </nav>
-            </div>
+          </div>
+          <div class="mobile_gamburger">
+            <a href="#" class="toggle-mnu">
+              <span></span>
+            </a>
+
+            <div class="clickhere"></div>
+            <div class="menubtn"><span></span></div>
+            <nav class="menu_hightlight navmenu">
+              <h4>Меню</h4>
+              <ul class="text-list">
+                <li><a href="#main">главная</a></li>
+                <li><a href="#aboutus">о нас</a>
+                </li>
+                <li><a href="#services">услуги</a></li>
+                <li><a href="#portfolio">портфолио</a></li>
+                <li><a href="#adwise">отзывы</a></li>
+                <li><a href="#price">цены</a></li>
+                <li><a href="#blog">блог</a></li>
+                <li><a href="#contact">контакты</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -429,7 +433,7 @@
           <div class="controls">
             <!-- FILTERS -->
             <ul class="filter_left">
-              <li><a class="filter" data-filter="all">All</a></li>
+              <li><a class="filter" data-filter="all">Все</a></li>
               <li><a class="filter" data-filter=".app">приложения</a></li>
               <li><a class="filter" data-filter=".card">карточки</a></li>
               <li><a class="filter" data-filter=".icon">иконки</a></li>
@@ -1207,6 +1211,21 @@
   <script src="js/lazysizes.min.js"></script>
   <script src="js/jquery.waypoints.js"></script>
   <script src="js/jquery.counterup.js"></script>
+  <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
+  <script>
+    // pagination on lending pages
+    $('.top_line_menu ul li a, .text-list li a').mPageScroll2id({
+      layout: 'auto',
+      offset: '.top_line_box',
+      autoScrollSpeed: true,
+      scrollSpeed: 1000,
+      scrollEasing: 'linear',
+      highlightByNextTarget: true,
+      keepHighlightUntilNext: true,
+      highlightSelector: '.menu_hightlight ul li a'
+
+    });
+  </script>
 
   <script>
     window.lazySizesConfig = window.lazySizesConfig || {};
@@ -1227,6 +1246,7 @@
       }
     });
   </script>
+
 </body>
 
 </html>
