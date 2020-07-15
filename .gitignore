@@ -1,5 +1,5 @@
 /node_modules/
-/dist/
+/dest/
 /app/libs/plagins/
 /.git/
 /**/*.psd

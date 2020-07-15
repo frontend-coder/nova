@@ -85,7 +85,7 @@ function images() {
 	return src('app/img/**/*')
 		.pipe(newer('dist/img/'))
 		.pipe(imagemin())
-		.pipe(dest('dist/img/'))
+		.pipe(dest('dest/img/'))
 }
 
 function cleanimg() {
@@ -108,8 +108,9 @@ function startwatch() {
 function buildcopy() {
 	return src(['app/css/**/*.min.css',
 		'app/js/**/*.min.js',
-		'app/**/*.html',
-		'app/**/*.php',
+		'app/*.html',
+		'app/*.php',
+		'app/fonts/**/*.*',
 		'app/**/ht.access'], {base:'app'})
 .pipe(dest('dest'))
 }
