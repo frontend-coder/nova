@@ -1,40 +1,16 @@
 $(document).ready(function () {
-	// вверхнее красиво-вращающееся меню
-	// 1 и 2 строка это анимация крестика
-	//3 строка - слайдер вниз меню
-	//слайдер вниз меню отвечает за работу мобильного меню к переносу
-	$('.toggle-mnu').click(function () {
-		$(this).toggleClass('on');
-		$('.top-menu').slideToggle();
-		return false;
-	});
-	$('body, .top-menu ul li a').click(function () {
-		$('.hidden-mnu').hide('slow');
-	});
 
 
-	$('.menubtn').on('click', function () {
-		$(this).toggleClass('opened');
-		$('.navmenu').toggleClass('opened');
-		return false;
-	});
+		  $('.burger').on('click', function () {
+		  	$(this).find('.burger_button').toggleClass('burger_button_active');
+		  	$(this).find('.burger_nav').toggleClass('burger_active');
+		  	$(this).find('.burger_overlay').toggleClass('burger_overlay_active');
+		  	$('body').toggleClass('body_hidden');
+		  });
 
-	$('body').on('click', function () {
-		$('.menubtn').removeClass('opened');
-		$('.navmenu').removeClass('opened');
-	});
-
-	$('.top_line_menu ul').superfish({
-		delay: 300,
-		animation: {
-			opacity: 'show'
-		},
-		animationOut: {
-			opacity: 'hide'
-		},
-		speed: 'normal',
-		speedOut: 'fast',
-	});
+		  $('.burger_button').on('click', (e) => {
+		  	e.preventDefault();
+		  });
 
 	$(function () {
 		$('#phone_key').mask('+7(000)000-00-00', {
@@ -77,7 +53,10 @@ $(document).ready(function () {
 			0: {
 				items: 1
 			},
-			600: {
+			480: {
+				items: 2
+			},
+			738: {
 				items: 3
 			},
 			1000: {
@@ -104,7 +83,7 @@ $(document).ready(function () {
 
 	$('#brands_carousel').owlCarousel({
 		loop: true,
-		items: 5,
+
 		margin: 20,
 		slideSpeed: 500,
 		// autoplay          : true,
@@ -115,7 +94,18 @@ $(document).ready(function () {
 		touchDrag: true,
 		//stagePadding          : 50,
 		nav: false,
-		dots: true
+		dots: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			480: {
+				items: 3
+			},
+			738: {
+				items: 5
+			}
+		}
 	});
 
 	var animTime = 300,

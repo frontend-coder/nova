@@ -36,16 +36,21 @@
             <div class="top_line_logo">
               <img src="img/logo.png" alt="логотип для сайта">
             </div>
-            <div class="top_line_menu menu_hightlight">
-              <ul class="sf-menu" id="nav">
-                <li>
-                  <a href="#main">главная</a>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="#aboutus">о нас</a>
+
+            <div id="cssmenu" class="menu_hightlight">
+              <ul>
+                <li><a href="#main">главная</a></li>
+                <li class="menu-item-has-children"><a href="#aboutus">о нас</a>
                   <ul>
-                    <li><a href="#">страница</a></li>
-                    <li><a href="#">страница</a></li>
+                    <li><a href="#">Кто должен делать это </a></li>
+                    <li><a href="#">Cтраница</a></li>
+                    <li><a href="#">Cтраница</a></li>
+                    <li class="menu-item-has-children"><a href="#">Продукт первый</a>
+                      <ul>
+                        <li><a href="#">субпункт</a></li>
+                        <li><a href="#">субпункт</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
                 <li><a href="#services">услуги</a></li>
@@ -56,6 +61,18 @@
                 <li><a href="#contact">контакты</a></li>
               </ul>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="top_line_social">
               <ul>
                 <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
@@ -66,28 +83,33 @@
                       aria-hidden="true"></i></a></li>
               </ul>
             </div>
-          </div>
-          <div class="mobile_gamburger">
-            <a href="#" class="toggle-mnu">
-              <span></span>
-            </a>
 
-            <div class="clickhere"></div>
-            <div class="menubtn"><span></span></div>
-            <nav class="menu_hightlight navmenu">
-              <h4>Меню</h4>
-              <ul class="text-list">
-                <li><a href="#main">главная</a></li>
-                <li><a href="#aboutus">о нас</a>
-                </li>
-                <li><a href="#services">услуги</a></li>
-                <li><a href="#portfolio">портфолио</a></li>
-                <li><a href="#adwise">отзывы</a></li>
-                <li><a href="#price">цены</a></li>
-                <li><a href="#blog">блог</a></li>
-                <li><a href="#contact">контакты</a></li>
-              </ul>
-            </nav>
+            <div class="burger">
+              <a href="#" class="burger_button">
+                <span class="burger_lines"></span>
+              </a>
+              <nav class="burger_nav">
+                <ul>
+                  <li>
+                    <a href="#main">главная</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#aboutus">о нас</a>
+                    <ul>
+                      <li><a href="#">страница</a></li>
+                      <li><a href="#">страница</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#services">услуги</a></li>
+                  <li><a href="#portfolio">портфолио</a></li>
+                  <li><a href="#adwise">отзывы</a></li>
+                  <li><a href="#price">цены</a></li>
+                  <li><a href="#blog">блог</a></li>
+                  <li><a href="#contact">контакты</a></li>
+                </ul>
+              </nav>
+              <div class="burger_overlay"></div>
+            </div>
           </div>
         </div>
       </div>
