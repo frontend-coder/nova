@@ -923,7 +923,8 @@ p.adwice_text {
 /* оформление футера  */
 .footer-border-top {
   border-top: 1px solid #fff;
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -933,8 +934,13 @@ footer {
 }
 
 .footer-border-top .top_line_social ul li a {
-  background-color: #f1c40f;
+  background-color: $color_blues;
   color: #222222;
+  margin-right: 5px;
+}
+
+.footer-border-top .top_line_social ul li a:last-child {
+  margin-right: 0;
 }
 
 .footer-border-top .top_line_social ul li a:hover {

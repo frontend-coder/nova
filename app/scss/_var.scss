@@ -7,12 +7,13 @@ $body_lineheight: 1.42;
 
 $placeholdercolortext: #202020;
 $white_color: #fff;
-$default-font: "RobotoRegular", sans-serif;
+$default-font: "RobotoRegular",
+sans-serif;
 $accent_color: orange;
 $body_color_text: #000000;
 
 
-
+$color_blues:#fcac45;
 
 // эти переменные временные по внутренему контенту
 
@@ -44,24 +45,24 @@ $text: #333;
 //                       название      стиль    font-weght, база, размер шрифта
 
 @mixin font-face($name, $sanserif, $weight: null, $linebase: null, $fontsize:null) {
-    font-family: quote($name), $sanserif;
-    font-weight: $weight;
-    line-height: ($linebase / $fontsize );
-    $rsize: $fontsize / 16;
+  font-family: quote($name), $sanserif;
+  font-weight: $weight;
+  line-height: ($linebase / $fontsize);
+  $rsize: $fontsize / 16;
   font-size: $rsize * 1rem;
 }
 
 // @include fontsize-lineheight(24, 16); расчет сразу и font-size и line-height
 
 @mixin fontsize-lineheight($lineheight, $fsize) {
-line-height: $lineheight / $fsize;
-$rembase: $fsize / 16;
-font-size: $rembase * 1rem;
+  line-height: $lineheight / $fsize;
+  $rembase: $fsize / 16;
+  font-size: $rembase * 1rem;
 }
 
 // @include lineheight(24, 16);  база для расчета и шрифт line-height
 @mixin lineheight($lineheight, $fsize) {
-line-height: $lineheight / $fsize;
+  line-height: $lineheight / $fsize;
 }
 
 // только для вывода font-size в единицах rem
@@ -73,7 +74,7 @@ line-height: $lineheight / $fsize;
 }
 
 @mixin font-size($size) {
- font-size: calculateRem($size);
+  font-size: calculateRem($size);
 }
 
 
@@ -81,27 +82,27 @@ line-height: $lineheight / $fsize;
 // @include padzero;
 
 @mixin padzero {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 // @include trans;
 @mixin trans {
-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 // @include transition(all, 0.2s, ease);
- //                   свойство время анимация
+//                   свойство время анимация
 @mixin transition($property, $duration, $timing, $delay:null) {
-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
 }
 
 
 
 // @include pxrem(548, 16);
 @mixin pxrem($width, $widthbase) {
-$lineheight: $width / $widthbase;
-width: $lineheight * 1rem;
+  $lineheight: $width / $widthbase;
+  width: $lineheight * 1rem;
 }
 
 
@@ -113,12 +114,12 @@ width: $lineheight * 1rem;
 
 // @include opacity(50);
 @mixin opacity($p) {
- opacity: $p*0.01;
- -webkit-opacity: $p*0.01;
- -khtml-opacity: $p*0.01;
- -moz-opacity: $p*0.01;
- filter:alpha(opacity=$p);
- -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$p)";
+  opacity: $p*0.01;
+  -webkit-opacity: $p*0.01;
+  -khtml-opacity: $p*0.01;
+  -moz-opacity: $p*0.01;
+  filter: alpha(opacity=$p);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$p)";
 }
 
 
@@ -133,14 +134,14 @@ width: $lineheight * 1rem;
 
 
 @mixin bg($top, $btm) {
- background: $top;
- background: -moz-linear-gradient(top, $top 0%, $btm 100%);
- background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$btm));
- background: -webkit-linear-gradient(top, $top 0%,$btm 100%);
- background: -o-linear-gradient(top, $top 0%,$btm 100%);
- background: -ms-linear-gradient(top, $top 0%,$btm 100%);
- background: linear-gradient(to bottom, $top 0%,$btm 100%);
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$btm',GradientType=0 );
+  background: $top;
+  background: -moz-linear-gradient(top, $top 0%, $btm 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $btm));
+  background: -webkit-linear-gradient(top, $top 0%, $btm 100%);
+  background: -o-linear-gradient(top, $top 0%, $btm 100%);
+  background: -ms-linear-gradient(top, $top 0%, $btm 100%);
+  background: linear-gradient(to bottom, $top 0%, $btm 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$btm', GradientType=0);
 }
 
 
@@ -150,12 +151,15 @@ width: $lineheight * 1rem;
 @mixin linx ($link, $visit, $hover, $active) {
   a {
     color: $link;
+
     &:visited {
       color: $visit;
     }
+
     &:hover {
       color: $hover;
     }
+
     &:active {
       color: $active;
     }
@@ -192,22 +196,26 @@ width: $lineheight * 1rem;
 @mixin triangle ($width, $direction, $color) {
   width: 0;
   height: 0;
-  @if $direction == up {
+
+  @if $direction==up {
     border-left: $width solid transparent;
     border-right: $width solid transparent;
     border-bottom: $width solid $color;
   }
-   @if $direction == down {
-     border-left: $width solid transparent;
+
+  @if $direction==down {
+    border-left: $width solid transparent;
     border-right: $width solid transparent;
     border-top: $width solid $color;
   }
-   @if $direction == left {
+
+  @if $direction==left {
     border-bottom: $width solid transparent;
     border-right: $width solid $color;
     border-top: $width solid transparent;
   }
-   @if $direction == right {
+
+  @if $direction==right {
     border-bottom: $width solid transparent;
     border-left: $width solid $color;
     border-top: $width solid transparent;
@@ -223,25 +231,28 @@ width: $lineheight * 1rem;
 // }
 
 @mixin trianglelong ($width, $longwidth, $direction, $color) {
- width: 0;
- height: 0;
-  @if $direction == up {
+  width: 0;
+  height: 0;
+
+  @if $direction==up {
     border-left: $width solid transparent;
     border-right: $width solid transparent;
     border-bottom: $longwidth solid $color;
   }
-  @if $direction == down {
+
+  @if $direction==down {
     border-left: $width solid transparent;
     border-right: $width solid transparent;
     border-top: $longwidth solid $color;
   }
- @if $direction == left {
+
+  @if $direction==left {
     border-top: $width solid transparent;
     border-left: $longwidth solid $color;
     border-bottom: $width solid transparent;
   }
 
- @if $direction == right {
+  @if $direction==right {
     border-top: $width solid transparent;
     border-bottom: $width solid transparent;
     border-right: $longwidth solid $color;
@@ -258,30 +269,41 @@ width: $lineheight * 1rem;
 // }
 
 @mixin trianglelight ($width, $height, $direction, $border, $arrowborder, $color) {
-  @if $direction == up {
-width: $width;
-height: $height;
-border: $border solid transparent; /* Прозрачные границы */
-border-bottom: $arrowborder solid $color; /* Добавляем треугольник */
-}
-  @if $direction == dawn {
-width: $width;
-height: $height;
-border: $border solid transparent; /* Прозрачные границы */
-border-top: $arrowborder solid $color; /* Добавляем треугольник */
-}
-  @if $direction == left {
-width: $width;
-height: $height;
-border: $border solid transparent; /* Прозрачные границы */
-border-right: $arrowborder solid $color; /* Добавляем треугольник */
-}
-  @if $direction == right {
-width: $width;
-height: $height;
-border: $border solid transparent; /* Прозрачные границы */
-border-left: $arrowborder solid $color; /* Добавляем треугольник */
-}
+  @if $direction==up {
+    width: $width;
+    height: $height;
+    border: $border solid transparent;
+    /* Прозрачные границы */
+    border-bottom: $arrowborder solid $color;
+    /* Добавляем треугольник */
+  }
+
+  @if $direction==dawn {
+    width: $width;
+    height: $height;
+    border: $border solid transparent;
+    /* Прозрачные границы */
+    border-top: $arrowborder solid $color;
+    /* Добавляем треугольник */
+  }
+
+  @if $direction==left {
+    width: $width;
+    height: $height;
+    border: $border solid transparent;
+    /* Прозрачные границы */
+    border-right: $arrowborder solid $color;
+    /* Добавляем треугольник */
+  }
+
+  @if $direction==right {
+    width: $width;
+    height: $height;
+    border: $border solid transparent;
+    /* Прозрачные границы */
+    border-left: $arrowborder solid $color;
+    /* Добавляем треугольник */
+  }
 
 }
 
@@ -294,26 +316,26 @@ border-left: $arrowborder solid $color; /* Добавляем треугольн
 // }
 
 @mixin triangle_in_corner ($width, $direction, $color) {
- width: 0;
-    height: 0;
-  @if $direction == topleft {
+  width: 0;
+  height: 0;
+
+  @if $direction==topleft {
     border-top: $width solid $color;
     border-right: $width solid transparent;
   }
-    @if $direction == topright {
+
+  @if $direction==topright {
     border-top: $width solid $color;
     border-left: $width solid transparent;
   }
-  @if $direction == bottomleft {
+
+  @if $direction==bottomleft {
     border-bottom: $width solid $color;
     border-right: $width solid transparent;
   }
- @if $direction == bottomright {
+
+  @if $direction==bottomright {
     border-bottom: $width solid $color;
     border-left: $width solid transparent;
   }
 }
-
-
-
-
