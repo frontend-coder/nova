@@ -164,8 +164,10 @@
 }
 
 .entry-content .mainbuttons {
+  display: inline-block;
   color: #fff;
   margin-top: 36px;
+  text-decoration: none;
 }
 
 /* стилизация постраничной навигации */
@@ -451,17 +453,18 @@ blockquote {
   margin: 0 10px 0 20px;
   padding: 8px 16px;
   font-size: 1.2rem;
-  color: #777;
+  color: #fff;
   font-weight: bold;
   border-radius: 16px;
-  background: rgb(230, 230, 230);
-  background: rgba(154, 154, 154, 0.10);
+  background: $color_blues;
+  text-decoration: none;
   @include trans;
 }
 
 .comment-number span a:hover {
-  background: rgba(154, 154, 154, 0.20);
+  background-color: darken($color_blues, 10%);
 }
+
 
 .c-head {
   font-size: 1.3rem;
@@ -773,7 +776,32 @@ label.comment-field {
 /* конец разрешения 980рх */
 
 @media only screen and (max-width : 960px) {
+
   /* делать это разрешение */
+  .main_content_block,
+  .main_sidebar_block {
+    width: 100%;
+    float: none;
+  }
+
+  .main_sidebar_block {
+    position: static;
+    top: 0;
+
+  }
+
+  .recent_posts {
+    justify-content: flex-start;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .c-body p {
+    font-size: 1rem;
+  }
+
 }
 
 /* конец разрешения 960рх */
@@ -797,7 +825,20 @@ label.comment-field {
 /* конец разрешения 812рх */
 
 @media only screen and (max-width: 800px) {
+
   /* делать это разрешение */
+  .breadcrumbs a {
+    font-size: 1.00rem;
+  }
+
+  form#commentform,
+  p.logged-in {
+    font-size: 1.02rem;
+  }
+
+  .main_content_block {
+    padding: 0 15px 0px;
+  }
 
 }
 
@@ -847,7 +888,20 @@ label.comment-field {
 /* конец разрешения 640рх */
 
 @media only screen and (max-width: 600px) {
+
   /* делать это разрешение */
+  .pagination {
+    margin: 0 auto 10px;
+  }
+
+  .comment-number span {
+    display: inline-block;
+    margin-top: 11px;
+  }
+
+  .comment-number span a {
+    margin-left: 0;
+  }
 }
 
 /* конец разрешения 600рх */
@@ -859,13 +913,41 @@ label.comment-field {
 /* конец разрешения 568рх */
 
 @media only screen and (max-width: 480px) {
+
   /* делать это разрешение */
+  .main_content_title {
+    font-size: 1.60rem;
+  }
+
+  .c-head span {
+    display: block;
+  }
+
+  #comments ul.children {
+    width: 96%;
+  }
+
 }
 
 /* конец разрешения 480рх */
 
 @media only screen and (max-width: 425px) {
+
   /* делать это разрешение */
+  .comment-number h4 {
+    font-size: 1.8rem;
+  }
+
+  .comment-number span a,
+  .comment-number span a:visited {
+    font-size: 1.0rem;
+  }
+
+  form#commentform,
+  p.logged-in {
+    margin: 15px;
+  }
+
 }
 
 /* конец разрешения 425рх */
@@ -890,7 +972,33 @@ label.comment-field {
 /* конец разрешения 387рх */
 
 @media only screen and (max-width: 384px) {
+
   /* делать это разрешение */
+  .main_content_title {
+    font-size: 1.30rem;
+  }
+
+  .header_fon_page {
+    margin-bottom: 0px;
+  }
+
+  .breadcrumbs_page {
+    margin-bottom: 20px;
+  }
+
+  .breadcrumbs a {
+    font-size: .91rem;
+  }
+
+  .main_content_list a {
+    font-size: .9000rem;
+  }
+
+  .bloged-in {
+    font-size: 1.1rem;
+  }
+
+
 
 }
 
@@ -910,9 +1018,19 @@ label.comment-field {
 /* конец разрешения 360рх */
 
 @media only screen and (max-width: 320px) {
-  /* делать это разрешение */
 
+  /* делать это разрешение */
+  .c-head,
+  #postcomment {
+    font-size: 1.1rem;
+  }
+
+  .comment-content-box {
+    flex-wrap: wrap;
+  }
+
+  .c-grav {
+    margin-bottom: 20px;
+  }
 
 }
-
-/* конец разрешения 320рх */
