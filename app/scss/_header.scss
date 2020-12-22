@@ -1,18 +1,18 @@
-@import '_var.scss';
+@import "_var.scss";
 
 .header_fon {
-  background: #000 url('../img/header-pic.jpg') center center no-repeat;
-  min-height: 775px;
-  background-size: cover;
   position: relative;
+  min-height: 775px;
+  background: #000000 url("../img/header-pic.jpg") center center no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
-.header_fon:before {
+.header_fon::before {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 85%);
@@ -20,30 +20,30 @@
 
 .top_line,
 .top_line_box {
-  // height: 70px;
+  height: 70px;
 }
 
 .top_line {
-  background-color: #ffffff;
-  width: 100%;
   position: fixed;
   z-index: 100;
-  box-shadow: 1px 1px 1px #95989A;
+  width: 100%;
+  box-shadow: 1px 1px 1px #95989a;
+  background-color: #ffffff;
 }
 
 .top_line_box {
-  padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 0;
 }
 
 .top_line_logo {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .top_line_logo img {
@@ -54,8 +54,8 @@
 
 /* верстаю социальные кнопки в топ-лайне */
 .top_line_social {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .top_line_social ul li {
@@ -63,32 +63,33 @@
 }
 
 .top_line_social ul li a {
+  @include trans;
+
   display: inline-block;
+  margin: 0;
+  border-radius: 10em;
   width: 30px;
   height: 30px;
+  font-size: 0.8em;
   line-height: 30px;
-  font-size: 0.80em;
-  color: #fff;
   text-align: center;
-  background-color: $second-color-fon;
-  border-radius: 10em;
-  margin: 0;
-  text-transform: uppercase;
   text-decoration: none;
-  @include trans;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $second-color-fon;
 }
 
 .top_line_social li a:hover {
+  color: #000000;
   background-color: $acsent-yellow-color;
-  color: #000;
 }
 
 /* оформление содержимого над самой нартикой ниже top line */
 .title-header {
-  padding: 20% 0;
-  color: #000;
-  width: 60%;
   position: relative;
+  padding: 20% 0;
+  width: 60%;
+  color: #000000;
 }
 
 .title-header-li {
@@ -96,16 +97,16 @@
 }
 
 .title-header-li ul {
-  padding-left: 0;
   margin-left: 0;
+  padding-left: 0;
 }
 
 .title-header-li ul li {
-  list-style-type: none;
   display: inline-block;
+  list-style-type: none;
+  border-left: 1px solid $acsent-yellow-color;
   padding: 0 10px;
   font-size: 1.125em;
-  border-left: 1px solid $acsent-yellow-color;
 }
 
 .title-header-li ul li:first-child {
@@ -113,11 +114,11 @@
 }
 
 .title-header h1 {
+  margin-bottom: 0;
   font-family: "RobotoSlabBold", sans-serif;
   font-size: 2.18em;
   line-height: 1.8;
   text-transform: uppercase;
-  margin-bottom: 0;
 }
 
 .title-header h1 span {
@@ -126,38 +127,39 @@
 
 .title-header h3 {
   font-family: "RalewayBold", sans-serif;
+  font-weight: 300;
   font-size: 0.91em;
   line-height: 1.5;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
+  color: #000000;
 }
 
 .calling-me {
-  text-align: left;
-  margin-top: 60px;
-  padding-left: 0;
+  margin-top: 40px;
   margin-left: 0;
+  padding-left: 0;
+  text-align: left;
 }
 
 .calling-me a {
-  display: inline-block;
-  background-color: transparent;
-  color: #000;
-  padding: 10px 40px;
-  font-size: 1.0em;
-  letter-spacing: 0.2em;
   @include trans;
-  text-transform: uppercase;
-  text-decoration: none;
+
+  display: inline-block;
+  border: 2px solid #000000;
+  padding: 10px 40px;
   font-weight: 300;
-  border: 2px solid #000;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
 }
 
 .calling-me a:hover {
-  background-color: $acsent-yellow-color;
   border: 2px solid $acsent-yellow-color;
+  background-color: $acsent-yellow-color;
 }
 
 .hidden {
@@ -166,19 +168,17 @@
 
 /* оформление главного меню сайта   */
 
-
 // .top_line_menu ul li a.mPS2id-highlight,
 .menu_hightlight ul li a.mPS2id-highlight,
 .top_line_menu ul li a:hover {
-  color: #f1c40f;
   position: relative;
+  color: #f1c40f;
 }
 
 #cssmenu {
-  padding: 0;
   margin: 0;
   border: 0;
-
+  padding: 0;
 }
 
 #cssmenu ul,
@@ -191,12 +191,13 @@
 #cssmenu ul {
   position: relative;
   z-index: 597;
+  text-transform: uppercase;
 }
 
 #cssmenu ul li {
   display: inline-block;
-  min-height: 1px;
   vertical-align: middle;
+  min-height: 1px;
 }
 
 #cssmenu ul li.hover,
@@ -207,39 +208,33 @@
 }
 
 #cssmenu ul ul {
-  visibility: hidden;
   position: absolute;
-  top: 100%;
   left: 0;
+  top: 100%;
+  bottom: 0;
   z-index: 598;
-  //   width: 100%;
+  margin-top: 0;
+  min-width: 190px;
+  text-transform: none;
+  visibility: hidden;
 }
 
 #cssmenu ul ul li {
+  position: relative;
+  display: block;
   float: none;
+  font-weight: 400;
 }
 
 #cssmenu ul ul ul {
-  top: 0;
   left: auto;
   right: -99.5%;
+  top: 0;
+  border-top: 0 none;
 }
 
-#cssmenu ul li:hover>ul {
+#cssmenu ul li:hover >ul {
   visibility: visible;
-}
-
-#cssmenu ul ul {
-  bottom: 0;
-  left: 0;
-}
-
-#cssmenu ul ul {
-  margin-top: 0;
-}
-
-#cssmenu ul ul li {
-  font-weight: normal;
 }
 
 #cssmenu a {
@@ -248,121 +243,70 @@
   text-decoration: none;
 }
 
-// #cssmenu {
-
-//   font-size: 12px;
-// }
-
-#cssmenu>ul {
+#cssmenu >ul {
   display: inline-block;
 }
 
-// #cssmenu:after,
-// #cssmenu ul:after {
-//   content: '';
-//   display: block;
-//   clear: both;
-// }
-
 #cssmenu ul li a {
-  color: #000;
   padding: 0 20px;
-  text-align: center;
-  font-size: .8rem;
+  font-family: "RobotoSlabBold", sans-serif;
+  font-size: 0.8rem;
   line-height: 1.2;
-  font-family: RobotoSlabBold,
-    sans-serif;
-  transition: .2s;
+  text-align: center;
+  color: #000000;
+  transition: 0.2s;
 }
 
 #cssmenu ul li a:hover {
   color: #f1c40f;
 }
 
-// .menu_hightlight ul li a.mPS2id-highlight,
-// .top_line_menu ul li a:hover {
-//   color: #f1c40f;
-//   position: relative;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-#cssmenu ul {
-  text-transform: uppercase;
-}
-
-#cssmenu ul ul {
-  // border-top: 4px solid #1b9bff;
-  text-transform: none;
-  min-width: 190px;
-}
-
 #cssmenu ul ul a {
-  background: #fff;
-  color: #000;
-  text-align: left;
-
   border: 1px solid #f1c40f;
   border-top: 0 none;
   padding: 16px 20px;
+  text-align: left;
+  color: #000000;
+  background: #ffffff;
 }
 
-#cssmenu ul ul ul {
-  border-top: 0 none;
-}
-
-#cssmenu ul ul li {
-  position: relative;
-  display: block;
-}
-
-#cssmenu>ul>li>a {
+#cssmenu >ul >li >a {
   line-height: 48px;
 }
 
-#cssmenu ul ul li:first-child>a {
+#cssmenu ul ul li:first-child >a {
   border-top: 1px solid #f1c40f;
 }
 
-#cssmenu ul ul li:hover>a {
+#cssmenu ul ul li:hover >a {
   // background: #35a6ff;
 }
 
-#cssmenu ul ul li:last-child>a {
+#cssmenu ul ul li:last-child >a {
   border-radius: 0 0 3px 3px;
   box-shadow: 0 1px 0 #f1c40f;
 }
 
-#cssmenu ul ul li:last-child:hover>a {
+#cssmenu ul ul li:last-child:hover >a {
   border-radius: 0 0 0 3px;
 }
 
-#cssmenu ul ul li.menu-item-has-children>a:after {
-  content: '+';
+#cssmenu ul ul li.menu-item-has-children >a::after {
+  content: "+";
   position: absolute;
-  top: 50%;
   right: 15px;
+  top: 50%;
   margin-top: -8px;
 }
 
-#cssmenu ul li:hover>a,
-#cssmenu ul li.active>a {
+#cssmenu ul li:hover >a,
+#cssmenu ul li.active >a {
   // background: #1b9bff;
   color: #f1c40f;
 }
 
-#cssmenu ul li.menu-item-has-children>a:after {
-  content: '+';
+#cssmenu ul li.menu-item-has-children >a::after {
+  content: "+";
   margin-left: 5px;
 }
 
@@ -376,95 +320,54 @@
   right: 99.5%;
 }
 
-
-// .menu-item-has-children {
-//   position: relative;
-// }
-
-// .menu-item-has-children:after {
-//   right: 0;
-//   top: 50%;
-//   margin-top: -2px;
-//   width: 0;
-//   height: 0;
-//   border: 4px solid transparent;
-//   border-bottom: none;
-//   border-top-color: #040404;
-//   content: '';
-//   vertical-align: middle;
-//   display: inline-block;
-//   position: relative;
-//   position: absolute;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  оформление мобильной версии меню и гамбургера */
 .burger {
-  margin-top: 110vh;
   margin: 0;
+  margin-top: 110vh;
 }
 
 .burger_button {
   position: relative;
+  z-index: 10;
+  display: none;
+  border-radius: 50%;
+  padding: 0;
   width: 65px;
   height: 65px;
   line-height: 65px;
-  display: block;
-  padding: 0;
-  border-radius: 50%;
   background-color: #2a2a2a;
   transition: all 0.5s ease;
-  z-index: 10;
-  display: none;
 }
 
-.burger_lines:before,
-.burger_lines:after,
+.burger_lines::before,
+.burger_lines::after,
 .burger_lines {
   position: absolute;
   width: 40px;
   height: 3px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .burger_lines {
-  cursor: pointer;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
-.burger_lines:before,
-.burger_lines:after {
-  content: '';
+.burger_lines::before,
+.burger_lines::after {
+  content: "";
 }
 
-.burger_lines:before {
+.burger_lines::before {
+  left: 0;
   top: 12px;
-  left: 0;
 }
 
-.burger_lines:after {
-  top: -12px;
+.burger_lines::after {
   left: 0;
+  top: -12px;
 }
 
 .burger_button:hover .burger_lines {
@@ -475,29 +378,28 @@
   background-color: transparent;
 }
 
-
-.burger_button_active .burger_lines:before {
+.burger_button_active .burger_lines::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-.burger_button_active .burger_lines:after {
+.burger_button_active .burger_lines::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
 .burger_nav {
-  padding-top: 110px;
-  min-width: 200px;
   position: fixed;
+  right: -100%;
   z-index: 20;
   display: flex;
   flex-flow: column;
-  height: 100%;
-  background-color: #2a2a2a;
   overflow-y: auto;
-  right: -100%;
+  padding-top: 110px;
+  height: 100%;
+  min-width: 200px;
   text-align: left;
+  background-color: #2a2a2a;
   transition: all 0.5s ease;
 }
 
@@ -510,17 +412,15 @@
 }
 
 .burger_nav ul li a {
-  color: #fff;
-
+  padding: 5px 30px;
+  font-family: "RobotoSlabBold", sans-serif;
+  font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.2;
-  font-family: RobotoSlabBold,
-    sans-serif;
-  padding: 5px 30px;
   text-decoration: none;
+  color: #ffffff;
   transition: all 0.2s ease;
   cursor: pointer;
-  font-weight: 400;
 }
 
 .burger_nav ul li a:hover {
@@ -528,8 +428,8 @@
 }
 
 .burger_nav ul li ul {
-  padding-left: 10px;
   padding-top: 5px;
+  padding-left: 10px;
 }
 
 .burger_nav ul li ul li {
@@ -537,8 +437,8 @@
 }
 
 .burger_nav ul li ul li a {
-  font-size: 1.0rem;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .body_hidden {
@@ -546,25 +446,28 @@
 }
 
 .burger_overlay {
-  display: none;
   position: fixed;
-  top: 0;
-  transition: display 0.4s ease;
   left: 0;
+  top: 0;
+  z-index: 1;
+  display: none;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
-  opacity: .7;
-  filter: brightness(0.7);
-  background-color: #6a6a6a;
+
   /* IE9, iOS 3.2+ */
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMmEyYTJhIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNhYWFhYWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
   background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0, rgb(42, 42, 42)), color-stop(1, rgb(170, 170, 170)));
+
   /* Android 2.3 */
-  background-image: -webkit-repeating-linear-gradient(left, rgb(42, 42, 42) 0%, rgb(170, 170, 170) 100%);
+  background-image: repeating-linear-gradient(left, rgb(42, 42, 42) 0%, rgb(170, 170, 170) 100%);
+
   /* IE10+ */
   background-image: repeating-linear-gradient(to right, rgb(42, 42, 42) 0%, rgb(170, 170, 170) 100%);
-  background-image: -ms-repeating-linear-gradient(left, rgb(42, 42, 42) 0%, rgb(170, 170, 170) 100%);
+  background-image: repeating-linear-gradient(left, rgb(42, 42, 42) 0%, rgb(170, 170, 170) 100%);
+  background-color: #6a6a6a;
+  opacity: 0.7;
+  filter: brightness(0.7);
+  transition: display 0.4s ease;
 }
 
 .burger_overlay_active {

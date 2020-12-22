@@ -41,8 +41,8 @@ function styles() {
 		.pipe(concat('libs.css'))
 		.pipe(rename('libs.min.css'))
 		.pipe(autoprefixer({
-		//	overrideBrowserlist: ['last 10 versions'],
-			grid: 'autoplace'
+			overrideBrowserlist: ['last 10 versions'],
+			grid: true
 		}))
 		.pipe(stripCssComments())
 		.pipe(cleancss(({
@@ -65,11 +65,10 @@ function browsersync() {
 function scripts() {
 	return src([
 		'app/libs/plagins/jquery.min.js',
-		'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-		'app/libs/plagins/OwlCarousel/OwlCarousel/dist/owl.carousel.min.js',
+		'app/libs/plagins/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'app/libs/plagins/OwlCarousel/dist/owl.carousel.min.js',
 		'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
-
-		'app/libs/common.js',
+		'app/libs/common.js'
 	])
 		.pipe(strip())
 		.pipe(rigger())
@@ -83,7 +82,7 @@ function images() {
 	return src('app/img/**/*')
 		.pipe(newer('dist/img/'))
 		.pipe(imagemin())
-		.pipe(dest('dest/img/'))
+		.pipe(dest('dist/img/'))
 }
 
 function cleanimg() {
@@ -108,7 +107,6 @@ function buildcopy() {
 		'app/js/**/*.min.js',
 		'app/*.html',
 		'app/*.php',
-		'app/fonts/**/*.*',
 		'app/**/ht.access'], {base:'app'})
 .pipe(dest('dest'))
 }
