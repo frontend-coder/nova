@@ -68,6 +68,7 @@ function scripts() {
 		'app/libs/plagins/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/plagins/OwlCarousel/dist/owl.carousel.min.js',
 		'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
+		'app/libs/valid.js',
 		'app/libs/common.js'
 	])
 		.pipe(strip())

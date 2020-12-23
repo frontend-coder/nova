@@ -1,298 +1,293 @@
-@import '_var.scss';
+@import "_var.scss";
+
 /* стили формы обратной связи */
 /* стили формы обратной связи */
 
 .form-callback {
-	max-width: 480px;
-	overflow: hidden;
-	padding: 20px;
-	position: relative;
-	border-radius: 1rem;
-	background-color: rgba(0, 0, 0, 0.5);
-	@include trans;
-	margin: auto;
-	border: 1px solid #fff;
+  @include trans;
+
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  padding: 20px;
+  max-width: 480px;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .form-callback h4 {
-	color: #fff;
-	font-family: "RobotoSlabRegular", sans-serif;
-	text-align: center;
-	@include font-size(24px);
-	margin: 20px 0 5px 0;
-	text-align: center;
-	font-weight: 600;
-	line-height: (27px / 20px);}
+  @include font-size(24px);
 
-	.form-callback h5 {
-		font-family: "RobotoSlabRegular", sans-serif;
-		text-align: center;
-		@include font-size(15px);
-		line-height: (30px / 25px);
-		color: #fff;
-		margin-bottom: 20px;
-	}
-	.popup_input {
-		display:block;
-		width:96%;
-		margin:10px auto 0;
-		padding: 5px 0;
-		@include font-size(16px);
-		color:#000;
-		border: none;
-		border-bottom: 3px solid #f1c40f;
-		text-indent:10px;
-		@include trans;
-	}
+  margin: 20px 0 5px;
+  font-family: "RobotoSlabRegular", sans-serif;
+  font-weight: 600;
+  line-height: (27px / 20px);
+  text-align: center;
+  color: #ffffff;
+}
 
-	.popup_input:focus, .popup_input:hover  {
-		border-bottom: 3px solid #E5722C;
-	}
+.form-callback label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
 
-	.popup_submit {
-			font-family: "RobotoSlabBold", sans-serif;
-		display:block;
-		width:96%;
-		border: none;
-		padding: 7px 0;
-		margin:10px auto 0;
-		@include font-size(16px);
-		cursor: pointer;
-		border-bottom: 3px solid #f1c40f;
-		background-color: #E5722C;
-		@include trans;
-	}
-	.popup_submit:hover {
-		border-bottom: 3px solid #E5722C;
-		background-color: #f1c40f;
-	}
+.js-validate-error-label {
+  position: absolute;
+  left: 10px;
+  right: 0;
+  top: 105%;
+  width: 100%;
+  font-size: 12px;
+}
+
+.form-callback h5 {
+  @include font-size(15px);
+
+  margin-bottom: 20px;
+  font-family: "RobotoSlabRegular", sans-serif;
+  line-height: (30px / 25px);
+  text-align: center;
+  color: #ffffff;
+}
+
+.popup_input {
+  @include font-size(16px);
+  @include trans;
+
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 3px solid #f1c40f;
+  padding: 5px 0;
+  width: 96%;
+  text-indent: 10px;
+  color: #000000;
+}
+
+.popup_input:focus,
+.popup_input:hover {
+  border-bottom: 3px solid #e5722c;
+}
+
+.popup_submit {
+  @include font-size(16px);
+  @include trans;
+
+  display: block;
+  margin: 10px auto 0;
+  border: none;
+  border-bottom: 3px solid #f1c40f;
+  padding: 7px 0;
+  width: 96%;
+  font-family: "RobotoSlabBold", sans-serif;
+  background-color: #e5722c;
+  cursor: pointer;
+}
+
+.popup_submit:hover {
+  border-bottom: 3px solid #e5722c;
+  background-color: #f1c40f;
+}
+
 .mfp-close-btn-in .mfp-close {
-	color: #fff;
+  color: #ffffff;
 }
 
+.forms-call {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
 
+.forms-call label {
+  display: block;
+  margin: 10px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	.forms-call {
-		width: 100%;
-		padding: 0;
-		border: 0;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-	}
-.forms-call label{
-		margin:10px 0;
-		display:block;
-	}
 .label_text {
-	width: 48%;
+  width: 48%;
 }
+
 .label_textarea {
-	width: 100%;
+  width: 100%;
 }
+
 .label_text input,
 .label_textarea textarea {
-display: block;
-width: 100%;
-}
-.label_textarea textarea {
-height: 150px;    font-size: .95rem;
-}
-.footer_call {
-	width: 100%;
-text-align: right;
+  display: block;
+  width: 100%;
 }
 
+.label_textarea textarea {
+  height: 150px;
+  font-size: 0.95rem;
+}
+
+.footer_call {
+  width: 100%;
+  text-align: right;
+}
 
 .footer_call .block_mini_link {
-border:1px solid #f1c40f;
-
+  border: 1px solid #f1c40f;
 }
 
 .footer_call .block_mini_link:hover {
-border:1px solid #fffffff;
+  border: 1px solid #ffffff;
 }
 
 .label_text input {
-	height: 30px;
-	line-height: 30px;
-	text-indent: 5px;
-    font-size: .95rem;
-
+  height: 30px;
+  font-size: 0.95rem;
+  line-height: 30px;
+  text-indent: 5px;
 }
+
 .checkbox_box {
-	width: 100%;
-	padding: 0;
-	color: #fff;
-	text-align: right;}
+  margin-left: 2px;
+  padding: 0;
+  width: 100%;
+  color: #ffffff;
+}
 
 .checkbox_box input[type="checkbox"] {
-	margin-left: 0;
-	padding: 0; }
-
-.checkbox_box input[type="checkbox"].css-checkbox {
-position: absolute;
-overflow: hidden;
-clip: rect(0 0 0 0);
-height: 1px;
-width: 1px;
-margin: -1px;
-padding: 0px;
-border: 0; }
-
-.checkbox_box input[type="checkbox"].css-checkbox + label.css-label {
-background-image: url("../img/checkbox_yes_white.png");
-padding-left: 22px;
-display: inline-block;
-line-height: 15px;
-background-repeat: no-repeat;
-vertical-align: middle;
-cursor: pointer;
-opacity: 1;
-color: #dedede;
-@include font-size(12px);
-line-height: 1.25; }
-.checkbox_box input[type="checkbox"].css-checkbox + label.css-label:hover {
-opacity: 1.0; }
-.checkbox_box input[type="checkbox"]:checked + label.css-label {
-background-image: url("../img/checkbox_no_white.png"); }
-.css-label a {
-color: #dedede;
-@include trans;
+  display: none;
 }
-.css-label a:hover {
-color: #b2b0b0; }
 
+.checkbox_box .css-label {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.checkbox_box .css-label::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 4px;
+  width: 18px;
+  height: 16px;
+  background-image: url("../img/checkbox_no_white.png");
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.checkbox_box .custon {
+  position: relative;
+}
+
+.checkbox_box input[type="checkbox"]:checked +.css-label::before {
+  background-image: url("../img/checkbox_yes_white.png");
+}
+
+.css-label a {
+  @include trans;
+
+  color: #dedede;
+}
+
+.css-label a:hover {
+  color: #b2b0b0;
+}
 
 .form-callback .checkbox_box {
-   padding-top: 10px;
-	width: 100%;
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
 }
 
-
-	/* // переписать */
-	.forms-calldecor {
-		position: relative;
+/* // переписать */
+.forms-calldecor {
+  position: relative;
 }
+
 .forms-calldecor .success {
-color: #fff;
-/* 					background-color: $color_button; */
-position: absolute;
-z-index: 1;
-left: 0;
-z-index: 1100;
-top: -100%;
-width: 100%;
-height: 100%;
-display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--webkit-justify-content: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
--webkit-flex-direction: column;
--ms-flex-direction: column;
-flex-direction: column;
--webkit-box-align: center;
--webkit-align-items: center;
--ms-flex-align: center;
-align-items: center;
-opacity: 0;
-padding-right: 20px;
-padding-left: 20px;
-transition: all 3.0s ease; }
-.forms-calldecor .success.active{
-top: 0;
-	opacity: 1;
+  /* 					background-color: $color_button; */
+  position: absolute;
+  left: 0;
+  top: -100%;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 3s ease;
 }
+
+.forms-calldecor .success.active {
+  top: 0;
+  opacity: 1;
+}
+
 .forms-calldecor .success p {
-text-transform: uppercase;
-display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-display: flex;
--webkit-align-self: center;
--ms-flex-item-align: center;
-align-self: center;
-color: #fff;
-font-size: 20px;
-margin: auto;
-text-align: center; }
+  display: flex;
+  align-self: center;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 /* // долюно работать анимация всплывашки */
 /* overlay at start */
 .mfp-fade.mfp-bg {
-opacity: 0;
--webkit-transition: all 0.615s ease-out;
--o-transition: all 0.615s ease-out;
-transition: all 0.615s ease-out; }
+  opacity: 0;
+  transition: all 0.615s ease-out;
+}
+
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
-opacity: 0.8; }
+  opacity: 0.8;
+}
+
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
-opacity: 0; }
+  opacity: 0;
+}
+
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
-opacity: 0; }
+  opacity: 0;
+}
+
 /* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-opacity: 1;
--webkit-transition: all 0.615s ease-out;
--o-transition: all 0.615s ease-out;
-transition: all 0.615s ease-out;
--webkit-transform: translateY(1%);
--ms-transform: translateY(1%);
-transform: translateY(1%); }
+  opacity: 1;
+  transform: translateY(1%);
+  transition: all 0.615s ease-out;
+}
+
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-opacity: 0;
--webkit-transform: translateY(-120%);
--ms-transform: translateY(-120%);
-transform: translateY(-120%);
+  opacity: 0;
+  transform: translateY(-120%);
 }
-.footer_fob {
-	width: 100%;
-}
-:focus::-webkit-input-placeholder {color: transparent}
-:focus::-moz-placeholder          {color: transparent}
-:focus:-moz-placeholder           {color: transparent}
-:focus:-ms-input-placeholder      {color: transparent}
 
+.footer_fob {
+  width: 100%;
+}
+
+:focus::input-placeholder {
+  color: transparent;
+}
+
+:focus::placeholder {
+  color: transparent;
+}
 
 /* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
 :-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}

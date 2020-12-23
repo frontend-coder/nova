@@ -1,184 +1,273 @@
 $(document).ready(function () {
+  $('ul li:has(ul)').addClass('has-submenu');
+  $('ul li ul').addClass('sub-menu');
+  $('ul.dropdown li').hover(
+    function () {
+      $(this).addClass('hover');
+    },
+    function () {
+      $(this).removeClass('hover');
+    }
+  );
+  const $menu = $('#menu');
+  const $menulink = $('#spinner-form');
+  const $search = $('#search');
+  const $search_box = $('.search_box');
+  const $menuTrigger = $('.has-submenu > a');
+  $menulink.click((e) => {
+    $menulink.toggleClass('active');
+    $menu.toggleClass('active');
+    if ($search.hasClass('active')) {
+      $('.menu.active').css('padding-top', '50px');
+    }
+  });
+  $search.click((e) => {
+    e.preventDefault();
+    $search_box.toggleClass('active');
+  });
+  $menuTrigger.click(function (e) {
+    e.preventDefault();
+    const t = $(this);
+    t.toggleClass('active').next('ul').toggleClass('active');
+  });
+  $('ul li:has(ul)');
+  function scrollMenu() {
+    const objToStick = $('.t__linne');
+    if ($(window).scrollTop() > 150) {
+      $(objToStick).addClass('active');
+    } else {
+      $(objToStick).removeClass('active');
+    }
+
+    if ($(window).scrollTop() > 700) {
+      $(objToStick).addClass('visible');
+    } else {
+      $(objToStick).removeClass('visible');
+    }
+  }
+  window.addEventListener('scroll', () => {
+    scrollMenu();
+  });
+
+  $(function () {
+    $('#phone_key').mask('+7(000)000-00-00', {
+      placeholder: '+7(___)___-__-__',
+      clearIfNotMatch: true,
+    });
+    $('#footer_phone').mask('+7(000)000-00-00', {
+      placeholder: '+7(___)___-__-__',
+      clearIfNotMatch: true,
+    });
+  });
+
+  $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    fixedBgPos: false,
+    fixedContentPos: false,
+    removalDelay: 160,
+    preloader: false,
+    tClose: 'Закрыть (Esc)',
+  });
+
+  //слайдер команды
+
+  $('#comand_carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    slideSpeed: 2500,
+    //	autoplay             : true,
+    autoplayTimeout: 3500,
+    nav: false,
+    dragBeforeAnimFinish: true,
+    mouseDrag: true,
+    touchDrag: true,
+    stagePadding: 30,
+    stopOnHover: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      480: {
+        items: 2,
+      },
+      738: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+
+  $('#adwise_carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 30,
+    slideSpeed: 2500,
+    //	autoplay          : true,
+    autoplayTimeout: 3500,
+    nav: false,
+    dragBeforeAnimFinish: true,
+    mouseDrag: true,
+    touchDrag: true,
+    stagePadding: 30,
+    stopOnHover: false,
+    dots: true,
+  });
+
+  $('#brands_carousel').owlCarousel({
+    loop: true,
+
+    margin: 20,
+    slideSpeed: 500,
+    // autoplay          : true,
+    stopOnHover: false,
+    autoplayTimeout: 3500,
+    dragBeforeAnimFinish: true,
+    mouseDrag: true,
+    touchDrag: true,
+    //stagePadding          : 50,
+    nav: false,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      480: {
+        items: 3,
+      },
+      738: {
+        items: 5,
+      },
+    },
+  });
+
+  var animTime = 300,
+    clickPolice = false;
+
+  $(document).on('touchstart click', '.acc-btn', function () {
+    if (!clickPolice) {
+      clickPolice = true;
+
+      var currIndex = $(this).index('.acc-btn'),
+        targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
+
+      $('.acc-btn').removeClass('selected');
+      $(this).addClass('selected');
+
+      $('.acc-btn h1').removeClass('selectev');
+      $(this).find('h1').addClass('selectev');
+
+      $('.acc-content').stop().animate(
+        {
+          height: 0,
+        },
+        animTime
+      );
+      $('.acc-content').eq(currIndex).stop().animate(
+        {
+          height: targetHeight,
+        },
+        animTime
+      );
+
+      setTimeout(function () {
+        clickPolice = false;
+      }, animTime);
+    }
+  });
+
+  // всплывающие окна обратной связи позвонить мне
+  $("a[href='#call-back']").magnificPopup({
+    mainClass: 'mfp-fade',
+    removalDelay: 400,
+    fixedBgPos: false,
+    fixedContentPos: false,
+    tClose: 'Закрыть (Esc)',
+    type: 'inline',
+  });
+
+  /* чтобы в формах был индивидуальный заголовок */
+  $("a[href='#call-back']").click(function () {
+    const dataForm = $(this).data('form');
+    const dataYandex = $(this).data('yandex');
+    const dataTitle = $(this).data('title');
+    $('form.form-callback').attr('onsubmit', dataYandex);
+    $('.form-callback [name=admin-data]').val(dataForm);
+    $('.get__title').text(dataTitle);
+  });
 
 
-		  $('.burger').on('click', function () {
-		  	$(this).find('.burger_button').toggleClass('burger_button_active');
-		  	$(this).find('.burger_nav').toggleClass('burger_active');
-		  	$(this).find('.burger_overlay').toggleClass('burger_overlay_active');
-		  	$('body').toggleClass('body_hidden');
-		  });
+  const validateForms = function (selector, rules, messages) {
+    // eslint-disable-next-line no-new
+    new window.JustValidate(selector, {
+      rules,
+      messages,
+      submitHandler(form) {
+        const formData = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              const MassPopup = "<div class='success'><p>Спасибо за заявку</p></div>";
+              // $('.contact-form').append(MassPopup);
+              $('#contact-form__send').html(MassPopup);
+            }
+          }
+        };
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form__send').html();
+          $.magnificPopup.close();
+        }, 1000);
+      },
+    });
+  };
 
-		  $('.burger_button').on('click', (e) => {
-		  	e.preventDefault();
-		  });
-
-	$(function () {
-		$('#phone_key').mask('+7(000)000-00-00', {
-			placeholder: '+7(___)___-__-__',
-			clearIfNotMatch: true
-		});
-		$('#footer_phone').mask('+7(000)000-00-00', {
-			placeholder: '+7(___)___-__-__',
-			clearIfNotMatch: true
-		});
-	});
-
-	$('.popup-youtube').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		fixedBgPos:false,
-		fixedContentPos:false,
-		removalDelay: 160,
-		preloader: false,
-		tClose: 'Закрыть (Esc)'
-	});
-
-
-	//слайдер команды
-
-	$('#comand_carousel').owlCarousel({
-		loop: true,
-		margin: 30,
-		slideSpeed: 2500,
-		//	autoplay             : true,
-		autoplayTimeout: 3500,
-		nav: false,
-		dragBeforeAnimFinish: true,
-		mouseDrag: true,
-		touchDrag: true,
-		stagePadding: 30,
-		stopOnHover: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			480: {
-				items: 2
-			},
-			738: {
-				items: 3
-			},
-			1000: {
-				items: 5
-			}
-		}
-	});
-
-	$('#adwise_carousel').owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 30,
-		slideSpeed: 2500,
-		//	autoplay          : true,
-		autoplayTimeout: 3500,
-		nav: false,
-		dragBeforeAnimFinish: true,
-		mouseDrag: true,
-		touchDrag: true,
-		stagePadding: 30,
-		stopOnHover: false,
-		dots: true
-	});
-
-	$('#brands_carousel').owlCarousel({
-		loop: true,
-
-		margin: 20,
-		slideSpeed: 500,
-		// autoplay          : true,
-		stopOnHover: false,
-		autoplayTimeout: 3500,
-		dragBeforeAnimFinish: true,
-		mouseDrag: true,
-		touchDrag: true,
-		//stagePadding          : 50,
-		nav: false,
-		dots: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			480: {
-				items: 3
-			},
-			738: {
-				items: 5
-			}
-		}
-	});
-
-	var animTime = 300,
-		clickPolice = false;
-
-	$(document).on('touchstart click', '.acc-btn', function () {
-		if (!clickPolice) {
-			clickPolice = true;
-
-			var currIndex = $(this).index('.acc-btn'),
-				targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
-
-			$('.acc-btn').removeClass('selected');
-			$(this).addClass('selected');
-
-			$('.acc-btn h1').removeClass('selectev');
-			$(this).find('h1').addClass('selectev');
-
-			$('.acc-content').stop().animate({
-				height: 0
-			}, animTime);
-			$('.acc-content').eq(currIndex).stop().animate({
-				height: targetHeight
-			}, animTime);
-
-			setTimeout(function () {
-				clickPolice = false;
-			}, animTime);
-		}
-
-	});
-
-
-
-
-	// всплывающие окна обратной связи позвонить мне
-	$('a[href=\'#call-back\']').magnificPopup({
-		mainClass: 'mfp-fade',
-		removalDelay: 400,
-		fixedBgPos: false,
-		fixedContentPos: false,
-		tClose: 'Закрыть (Esc)',
-		type: 'inline'
-	});
-
-	/*чтобы в формах был индивидуальный заголовок */
-	$('a[href="#call-back"]').click(function () {
-		var dataForm = $(this).data('form');
-		var dataText = $(this).data('text');
-		$('.forms-call h4').text(dataText);
-		$('.forms-call [name=admin-data]').val(dataForm);
-	});
-
-
-	//Ajax push mesege http://api.jquery.com/jquery.ajax/
-	$('form').submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: 'POST',
-			url: 'mail.php', //Change
-			data: th.serialize()
-		}).done(function () {
-			$('.forms-calldecor .success').addClass('active');
-			setTimeout(function () {
-				// Done Functions
-				$('.forms-calldecor .success').removeClass('active');
-				th.trigger('reset');
-				$.magnificPopup.close();
-			}, 3000);
-		});
-		return false;
-	});
-	//castom code
+  validateForms(
+    '.form-callback',
+    {
+      famely: {
+        required: true,
+        minLength: 5,
+        maxLength: 38,
+      },
+      tel: {
+        required: true,
+      },
+      checkbox: {
+        required: true,
+      },
+    },
+    {
+      famely: {
+        required: 'Поле обязально к заполнению!',
+        minLength: 'Введите не менее 5 символов',
+        maxLength: 'Введите не более 38 символов',
+      },
+      tel: {
+        required: 'Поле обязательно к заполнению',
+      },
+      theme: {
+        required: 'Поле обязательно к заполнению',
+        minLength: 'Введите не менее 10 символов',
+        maxLength: 'Введите не более 100 символов',
+      },
+      mesage: {
+        required: 'Поле обязательно к заполнению',
+        minLength: 'Введите не менее 15 символов',
+        maxLength: 'Введите не более 380 символов',
+      },
+      checkbox: {
+        required: 'Поле обязателено к заполнению',
+      },
+    }
+  );
+  //castom code
 });
 
 
