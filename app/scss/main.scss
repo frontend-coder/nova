@@ -56,7 +56,7 @@ body {
     border: #666666 1px solid;
 
     &:required:valid {
-      border-color: green;
+      border-color: #008000;
     }
 
     &:focus:required:invalid {

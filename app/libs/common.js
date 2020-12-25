@@ -200,73 +200,125 @@ $(document).ready(function () {
   });
 
 
-  const validateForms = function (selector, rules, messages) {
-    // eslint-disable-next-line no-new
-    new window.JustValidate(selector, {
-      rules,
-      messages,
-      submitHandler(form) {
-        const formData = new FormData(form);
-        const xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-              const MassPopup = "<div class='success'><p>Спасибо за заявку</p></div>";
-              // $('.contact-form').append(MassPopup);
-              $('#contact-form__send').html(MassPopup);
-            }
-          }
-        };
-        xhr.open('POST', 'mail.php', true);
-        xhr.send(formData);
-        form.reset();
-        setTimeout(() => {
-          $('#contact-form__send').html();
-          $.magnificPopup.close();
-        }, 1000);
-      },
-    });
-  };
+   new window.JustValidate('.form-callback', {
+     rules: {
+       famely: {
+         required: true,
+         minLength: 5,
+         maxLength: 38,
+       },
+       tel: {
+         required: true,
+       },
+       checkbox: {
+         required: true,
+       },
+     },
+     messages: {
+       famely: {
+         required: 'Поле обязально к заполнению!',
+         minLength: 'Введите не менее 5 символов',
+         maxLength: 'Введите не более 38 символов',
+       },
+       tel: {
+         required: 'Поле обязательно к заполнению',
+       },
+       checkbox: {
+         required: 'Поле обязателено к заполнению',
+       },
+     },
+     focusWrongField: true,
+     submitHandler: function (form, values, ajax) {
+       console.log(values);
+       ajax({
+         url: 'mail.php',
+         method: 'POST',
+         data: values,
+         async: true,
+         callback: (response) => {
+           const MassPopup = "<div id='contact-form__send'><div class='success'><p>Спасибо за заявку</p></div></div>";
+           $('button.popup_submit').attr('disabled');
+           $('.forms').html(MassPopup);
+           setTimeout(() => {
+             form.reset();
+             $('.forms').html(' ');
+             // $('#ontact-form__send').removeClass('success');
+             $.magnificPopup.close();
+           
+           }, 2000);
+           //       console.log(response);
+         },
+       });
+     },
+     invalidFormCallback: function (errors) {
+       // console.log(errors);
+     },
+   });
 
-  validateForms(
-    '.form-callback',
-    {
-      famely: {
-        required: true,
-        minLength: 5,
-        maxLength: 38,
-      },
-      tel: {
-        required: true,
-      },
-      checkbox: {
-        required: true,
-      },
-    },
-    {
-      famely: {
-        required: 'Поле обязально к заполнению!',
-        minLength: 'Введите не менее 5 символов',
-        maxLength: 'Введите не более 38 символов',
-      },
-      tel: {
-        required: 'Поле обязательно к заполнению',
-      },
-      theme: {
-        required: 'Поле обязательно к заполнению',
-        minLength: 'Введите не менее 10 символов',
-        maxLength: 'Введите не более 100 символов',
-      },
-      mesage: {
-        required: 'Поле обязательно к заполнению',
-        minLength: 'Введите не менее 15 символов',
-        maxLength: 'Введите не более 380 символов',
-      },
-      checkbox: {
-        required: 'Поле обязателено к заполнению',
-      },
-    }
-  );
+  // 2 форма 
+  
+   new window.JustValidate('.forms-call', {
+     rules: {
+       famely: {
+         required: true,
+         minLength: 5,
+         maxLength: 38,
+       },
+       textred: {
+         required: true,
+         minLength: 15,
+         maxLength: 300,
+       },
+       tel: {
+         required: true,
+       },
+       checkbox: {
+         required: true,
+       },
+     },
+     messages: {
+       famely: {
+         required: 'Поле обязально к заполнению!',
+         minLength: 'Введите не менее 5 символов',
+         maxLength: 'Введите не более 38 символов',
+       },
+       textred: {
+         required: 'Поле обязально к заполнению!',
+         minLength: 'Введите не менее 15 символов',
+         maxLength: 'Введите не более 300 символов',
+       },
+       tel: {
+         required: 'Поле обязательно к заполнению',
+       },
+       checkbox: {
+         required: 'Поле обязателено к заполнению',
+       },
+     },
+     focusWrongField: true,
+     submitHandler: function (form, values, ajax) {
+       console.log(values);
+       ajax({
+         url: 'mailbig.php',
+         method: 'POST',
+         data: values,
+         async: true,
+         callback: (response) => {
+           const MassPopup = "<div id='contact-form__send'><div class='success'><p>Спасибо за заявку</p></div></div>";
+           $('.forms').html(MassPopup);
+           setTimeout(() => {
+             form.reset();
+             $('.forms').html(' ');
+             // $('#ontact-form__send').removeClass('success');
+             $.magnificPopup.close();
+           }, 2000);
+           //       console.log(response);
+         },
+       });
+     },
+     invalidFormCallback: function (errors) {
+       // console.log(errors);
+     },
+   });
   //castom code
 });
 

@@ -409,7 +409,19 @@
     left: 0;
     top: 100%;
     justify-content: flex-start;
+    overflow: hidden;
     width: 100%;
+    max-height: 0;
+  }
+
+  .menu >ul ul {
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .menu.active,
+  .menu >ul ul.active {
+    max-height: 55em;
   }
 
   .menu ul .sub-menu {
@@ -431,8 +443,7 @@
 
   .spinner-master {
     position: relative;
-    float: left;
-    margin: 15px;
+    margin: 0 10px 0 auto;
     width: 30px;
     height: 30px;
   }

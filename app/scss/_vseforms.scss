@@ -105,6 +105,7 @@
 }
 
 .forms-call label {
+  position: relative;
   display: block;
   margin: 10px 0;
 }
@@ -149,6 +150,7 @@
 }
 
 .checkbox_box {
+  position: relative;
   margin-left: 2px;
   padding: 0;
   width: 100%;
@@ -171,12 +173,16 @@
   content: "";
   position: absolute;
   left: -25px;
-  top: 4px;
+  top: 2px;
   width: 18px;
   height: 16px;
   background-image: url("../img/checkbox_no_white.png");
   background-repeat: no-repeat;
   transition: 0.5s;
+}
+
+.get-info_right .forms-call .checkbox_box .css-label::before {
+  top: -1px;
 }
 
 .checkbox_box .custon {
@@ -208,38 +214,46 @@
   position: relative;
 }
 
-.forms-calldecor .success {
-  /* 					background-color: $color_button; */
+#contact-form__send,
+.contact-form__send {
+  position: relative;
+}
+
+.forms {
+  width: 100%;
+  height: 1px;
+}
+
+.success {
   position: absolute;
   left: 0;
-  top: -100%;
+  top: 0;
   z-index: 1100;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-right: 20px;
-  padding-left: 20px;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  opacity: 0;
+  opacity: 1;
   transition: all 3s ease;
 }
 
-.forms-calldecor .success.active {
-  top: 0;
-  opacity: 1;
-}
-
+.forms-call .success p,
 .forms-calldecor .success p {
   display: flex;
   align-self: center;
-  margin: auto;
+
+  // margin: auto;
+  padding: 10px;
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  background-color: $color_button;
+  transform: translate(50%, -150%);
+}
+
+.forms-call .success p {
+  transform: translate(37%, -119%);
 }
 
 /* // долюно работать анимация всплывашки */

@@ -1,20 +1,62 @@
-<?php
+<?
+require_once 'PHPMailer/PHPMailerAutoload.php';
 
-$recepient = "frontendercode@gmail.com";
-$sitename  = "Сайт https://frontend-coder.github.io/";
-$subject   = "Заказ с сайта https://frontend-coder.github.io/";
+$admin_email = array();
+foreach ( $_POST["admin_email"] as $key => $value ) {
+	array_push($admin_email, $value);
+}
 
-$name = trim($_POST["name"]);
-$email = trim($_POST["email"]);
-$messagesite = trim($_POST["messagesite"]);
+$form_subject = trim($_POST["form_subject"]);
+
+$mail = new PHPMailer;
+$mail->CharSet = 'UTF-8';
 
 
 
-$message = "
-Имя обратившегося: $name <br>
-Почтовый ящик клиента: $email <br>
-Текст сообщения: $messagesite";
+$c = true;
+$message = '';
+foreach ( $_POST as $key => $value ) {
+	if ( $value != ""  && $key != "admin_email" && $key != "form_subject" ) {
+		if (is_array($value)) {
+			$val_text = '';
+			foreach ($value as $val) {
+				if ($val && $val != '') {
+					$val_text .= ($val_text==''?'':', ').$val;
+				}
+			}
+			$value = $val_text;
+		}
+		$message .= "
+		" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
+		<td style='padding: 10px; width: auto;'><b>$key:</b></td>
+		<td style='padding: 10px;width: 100%;'>$value</td>
+		</tr>
+		";
+	}
+}
+$message = "<table style='width: 50%;'>$message</table>";
 
-$pagetitle = "Новая заявка с сайта \"$sitename\"";
-mail($recepient, $subject, $message, "Content-type: text/html; charset=\"utf-8\"\n From: $recepient");
+
+// От кого
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Веб-дизайн профи Nova');
+ 
+// Кому
+foreach ( $admin_email as $key => $value ) {
+	$mail->addAddress($value);
+}
+// Тема письма
+$mail->Subject = $form_subject;
+ 
+// Тело письма
+$body = $message;
+// $mail->isHTML(true);  это если прям верстка
+$mail->msgHTML($body);
+
+// Приложения
+if ($_FILES){
+	foreach ( $_FILES['file']['tmp_name'] as $key => $value ) {
+		$mail->addAttachment($value, $_FILES['file']['name'][$key]);
+	}
+}
+$mail->send();
 ?>

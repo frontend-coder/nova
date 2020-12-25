@@ -29,88 +29,77 @@
 <body>
   <!-- Custom HTML -->
   <header class="header_fon_page">
-    <div class="top_line">
+    <div class="t__linne">
       <div class="container">
-        <div class="row">
-          <div class="top_line_box">
-            <div class="top_line_logo">
-              <img src="img/logo.png" alt="логотип для сайта">
-            </div>
+        <!-- menu_hightlight -->
+        <div class="nav_wrapper">
+          <div class="top_line_logo">
+            <img src="img/logo.png" alt="логотип для сайта">
+          </div>
+          <div class="spinner-master">
+            <input type="checkbox" id="spinner-form" />
+            <label for="spinner-form" class="spinner-spin">
+              <div class="spinner diagonal part-1"></div>
+              <div class="spinner horizontal"></div>
+              <div class="spinner diagonal part-2"></div>
+            </label>
+          </div>
 
-            <div id="cssmenu" class="menu_hightlight">
-              <ul>
-                <li><a href="./">главная</a></li>
-                <li class="menu-item-has-children"><a href="./page.html">о нас</a>
-                  <ul>
-                    <li><a href="./page.html">Кто должен делать это </a></li>
-                    <li><a href="./page.html">Cтраница</a></li>
-                    <li><a href="./page.html">Cтраница</a></li>
-                    <li class="menu-item-has-children"><a href="./page.html">Продукт первый</a>
-                      <ul>
-                        <li><a href="./page.html">субпункт</a></li>
-                        <li><a href="./page.html">Касубпункт</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="./page.html">услуги</a></li>
-                <li><a href="./page.html">портфолио</a></li>
-                <li><a href="./page.html">отзывы</a></li>
-                <li><a href="./page.html">цены</a></li>
-                <li><a href="./category.html">блог</a></li>
-                <li><a href="./page.html">контакты</a></li>
-              </ul>
-            </div>
-
-
-            <div class="top_line_social">
-              <ul>
-                <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
-                      aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/frontendercode/" target="_blank"><i class="fa fa-instagram"
-                      aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/frontend-coder" target="_blank"><i class="fa fa-github-alt"
-                      aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-
-            <div class="burger">
-              <a href="#" class="burger_button">
-                <span class="burger_lines"></span>
-              </a>
-              <nav class="burger_nav">
+          <nav id="menu" class="menu">
+            <ul class="dropdown">
+              <li><a href="./" title="Link">Главная</a></li>
+              <li class="menu-item-has-children"><a href="./page.html" title="Link">О нас</a>
                 <ul>
-                  <li><a href="./">главная</a></li>
-                  <li class="menu-item-has-children"><a href="./page.html">о нас</a>
+                  <li class="menu-item-has-children"><a href="./page.html" title="Link">CтраницаГ </a>
                     <ul>
-                      <li><a href="./page.html">Кто должен делать это </a></li>
-                      <li><a href="./page.html">Cтраница</a></li>
-                      <li><a href="./page.html">Cтраница</a></li>
-                      <li class="menu-item-has-children"><a href="./page.html">Продукт первый</a>
-                        <ul>
-                          <li><a href="./page.html">субпункт</a></li>
-                          <li><a href="./page.html">Касубпункт</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="./single.html" title="Link">Cтраница1</a></li>
+                      <li><a href="./page.html" title="Link">Cтраница2</a></li>
                     </ul>
                   </li>
-                  <li><a href="./page.html">услуги</a></li>
-                  <li><a href="./page.html">портфолио</a></li>
-                  <li><a href="./page.html">отзывы</a></li>
-                  <li><a href="./page.html">цены</a></li>
-                  <li><a href="./category.html">блог</a></li>
-                  <li><a href="./page.html">контакты</a></li>
+                  <li class="menu-item-has-children"><a href="./page.html" title="Link">Документы </a>
+                    <ul>
+                      <li><a href="./page.html" title="Link">Сертификаты1</a></li>
+                      <li><a href="./page.html" title="Link">Паспорта2</a></li>
+                      <li><a href="./page.html" title="Link">Патенты3 </a></li>
+                    </ul>
+                  </li>
                 </ul>
-              </nav>
-              <div class="burger_overlay"></div>
-            </div>
+              </li>
+              <li><a href="./page.html">Услуги</a></li>
+              <li><a href="./page.html">Портфолио</a></li>
+              <li><a href="./page.html">Отзывы</a></li>
+              <li><a href="./page.html">Цены</a></li>
+              <li><a href="./category.html">Блог</a></li>
+              <li><a href="./page.html">Контакты</a></li>
+
+            </ul>
+          </nav>
+          <a href="#search_box" class="btn__search" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+
+
+          <!-- кнопка социальных сетех -->
+          <div class="top_line_social">
+            <ul>
+              <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/frontendercode/" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/frontend-coder" target="_blank"><i class="fa fa-github-alt"
+                    aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <form class="search_box" id="search_box" action="/search/">
+        <div class="search_input">
+          <input name="search_criteria" placeholder="Найти все" value="" type="text">
+          <input class="search_icon" value="Поиск" type="submit">
+        </div>
+      </form>
+
     </div>
     <!-- конец top_line -->
-
-
 
   </header><!-- /header -->
 
@@ -128,300 +117,322 @@
         </div>
       </div>
     </section>
+    <section class="art__block">
+      <div class="container">
+        <div class="row">
+          <div class="main_block clearfix">
+            <div class="main_content_block">
 
-    <div class="container">
-      <div class="row">
-        <div class="main_block clearfix">
-          <div class="main_content_block">
-            <div class="category_box">
-              <div class="thamb_images">
-                <img src="img/galary/1.jpg" alt="картинка">
-              </div>
-              <h2 class="main_content_title">Мы креативное агенство, работающее над воплощением реальности в цифре</h2>
-              <ul class="main_content_list">
-                <li> <a class="mcl_autor" href="#">Пушкин С.</a></li>
-                <li> <a class="mcl_date" href="#">01 марта 2020</a></li>
-                <li> <a class="mcl_comment" href="#">1 коментарий</a></li>
-                <li> <a class="mcl_tags" href="#">метка 1</a>, <a href="#">метка 2</a>, <a href="#">метка 3</a> </li>
-              </ul>
-              <div class="entry-content entry_single">
-                <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления проектов. 
-                </p>
-                <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления проектов. 
-                </p>
-                <blockquote> Только единицы Web-компаний способно выжить в течение 12 лет на дичайшем рынке интелектуальных услуг. Мы одна из них. 
-                  
-                </blockquote>
-                <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления проектов. 
-                </p>
-                <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления проектов. 
-                </p>
-                <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления проектов. 
-                </p>
-              </div>
-              <div class="entry_footer">
-                <a href="#" class="page-numbers"> предыдущая запись</a>
-                <a href="#" class="page-numbers"> следующая запись</a>
-              </div>
-              <!--
-начало оформления блока комментов -->
-              <p class="nocomments">Эта запись защищена. Введите пароль, чтобы видеть комментарии </p>
-              <div id="comments">
-                <div class="comment-number">
-                  <h4>5 комментариев
-                    <!-- Нет комментариев Один комментарий 3 комментариев -->
-                  </h4>
-                  <span><a href="#respond" title="<?php _e('Оставить комментарий', 'punchcut'); ?>">Оставить
-                      комментарий</a></span>
-                </div>
-                <!--end comment-number-->
-                <ol class="commentlist">
-                  <li class="comment even thread-even depth-1" id="comment-1">
-                    <div class="comment-box">
-                      <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18 2018</span>
-                      </div>
-                      <div class="comment-content-box">
-                        <div class="c-grav">
-                          <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
-                            srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
-                            class="avatar avatar-32 photo" alt="">
-                        </div>
-                        <div class="c-body">
-                          <p>Привет! Это комментарий.<br>
-                            Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
-                            «Комментарии» в консоли.<br>
-                            Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
-                          <div class="reply">
-                            <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
-                              class="comment-edit-link">редактировать</a>
-                          </div>
-                        </div>
-                        <!--end c-body-->
-                      </div>
-                    </div>
-                    <!--end comment-box-->
-                  </li>
-                  <li class="comment even thread-even depth-1" id="comment-2">
-                    <div class="comment-box">
-                      <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18 2018</span>
-                      </div>
-                      <div class="comment-content-box">
-                        <div class="c-grav">
-                          <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
-                            srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
-                            class="avatar avatar-32 photo" alt="">
-                        </div>
-                        <div class="c-body">
-                          <p>Привет! Это комментарий.<br>
-                            Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
-                            «Комментарии» в консоли.<br>
-                            Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
-                          <div class="reply">
-                            <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
-                              class="comment-edit-link">редактировать</a>
-                          </div>
-                        </div>
-                        <!--end c-body-->
-                      </div>
-                    </div>
-                    <!--end comment-box-->
-                  </li>
-                  <li class="comment even thread-even depth-1" id="comment-3">
-                    <div class="comment-box">
-                      <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18 2018</span>
-                      </div>
-                      <div class="comment-content-box">
-                        <div class="c-grav">
-                          <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
-                            srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
-                            class="avatar avatar-32 photo" alt="">
-                        </div>
-                        <div class="c-body">
-                          <p>Привет! Это комментарий.<br>
-                            Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
-                            «Комментарии» в консоли.<br>
-                            Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
-                          <div class="reply">
-                            <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
-                              class="comment-edit-link">редактировать</a>
-                          </div>
-                        </div>
-                        <!--end c-body-->
-                      </div>
-                    </div>
-                    <!--end comment-box-->
-                    <ul class="children">
-                      <li class="comment even thread-even depth-1" id="comment-6">
-                        <div class="comment-box">
-                          <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
-                              2018</span> </div>
-                          <div class="comment-content-box">
-                            <div class="c-grav">
-                              <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
-                                srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
-                                class="avatar avatar-32 photo" alt="">
-                            </div>
-                            <div class="c-body">
-                              <p>Привет! Это комментарий.<br>
-                                Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
-                                «Комментарии» в консоли.<br>
-                                Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
-                              <div class="reply">
-                                <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
-                                  class="comment-edit-link">редактировать</a>
-                              </div>
-                            </div>
-                            <!--end c-body-->
-                          </div>
-                        </div>
-                        <!--end comment-box-->
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="comment even thread-even depth-1" id="comment-4">
-                    <div class="comment-box">
-                      <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18 2018</span>
-                      </div>
-                      <div class="comment-content-box">
-                        <div class="c-grav">
-                          <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
-                            srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
-                            class="avatar avatar-32 photo" alt="">
-                        </div>
-                        <div class="c-body">
-                          <p>Привет! Это комментарий.<br>
-                            Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
-                            «Комментарии» в консоли.<br>
-                            Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
-                          <div class="reply">
-                            <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
-                              class="comment-edit-link">редактировать</a>
-                          </div>
-                        </div>
-                        <!--end c-body-->
-                      </div>
-                    </div>
-                    <!--end comment-box-->
-                  </li>
-                </ol>
+              <div class="category_box">
+
+
+                <article>
+                  <div class="thamb_images">
+                    <img src="img/galary/1.jpg" alt="картинка">
+                  </div>
+                  <h2 class="main_content_title">Мы креативное агенство, работающее над воплощением реальности в цифре
+                  </h2>
+                  <ul class="main_content_list">
+                    <li> <a class="mcl_autor" href="#">Пушкин С.</a></li>
+                    <li> <a class="mcl_date" href="#">01 марта 2020</a></li>
+                    <li> <a class="mcl_comment" href="#">1 коментарий</a></li>
+                    <li> <a class="mcl_tags" href="#">метка 1</a>, <a href="#">метка 2</a>, <a href="#">метка 3</a>
+                    </li>
+                  </ul>
+                  <div class="entry-content entry_single">
+                    <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали
+                      над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления
+                      проектов.
+                    </p>
+                    <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали
+                      над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления
+                      проектов.
+                    </p>
+                    <blockquote> Только единицы Web-компаний способно выжить в течение 12 лет на дичайшем рынке
+                      интелектуальных услуг. Мы одна из них.
+
+                    </blockquote>
+                    <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали
+                      над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления
+                      проектов.
+                    </p>
+                    <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали
+                      над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления
+                      проектов.
+                    </p>
+                    <p> Мы креативное агенство, которое существует 12 лет. На протяжении этих лет мы не только работали
+                      над коммерческими проектами, но и выполнили нескончаемое количество наработок в сфере управления
+                      проектов.
+                    </p>
+                  </div>
+                </article>
+
                 <div class="entry_footer">
-                  <div class="page-numbers">Старые комментарии</div>
-                  <div class="page-numbers">Новые комментарии</div>
+                  <a href="#" class="page-numbers"> предыдущая запись</a>
+                  <a href="#" class="page-numbers"> следующая запись</a>
                 </div>
-                <p class="note">Комментарии закрыты.</p>
-              </div>
-              <!--end #comments-->
-              <div id="respond">
-                <div class="cancel-comment-reply">
-                  <small><a href="#" id="cancel-comment-reply-link" style="display: none;">Нажмите, чтобы отменить
-                      ответ.</a></small>
+                <!-- начало оформления блока комментов -->
+                <p class="nocomments">Эта запись защищена. Введите пароль, чтобы видеть комментарии </p>
+                <div id="comments">
+                  <div class="comment-number">
+                    <h4>5 комментариев
+                      <!-- Нет комментариев Один комментарий 3 комментариев -->
+                    </h4>
+                    <span><a href="#respond" title="<?php _e('Оставить комментарий', 'punchcut'); ?>">Оставить
+                        комментарий</a></span>
+                  </div>
+                  <!--end comment-number-->
+                  <ol class="commentlist">
+                    <li class="comment even thread-even depth-1" id="comment-1">
+                      <div class="comment-box">
+                        <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
+                            2018</span>
+                        </div>
+                        <div class="comment-content-box">
+                          <div class="c-grav">
+                            <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
+                              srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
+                              class="avatar avatar-32 photo" alt="">
+                          </div>
+                          <div class="c-body">
+                            <p>Привет! Это комментарий.<br>
+                              Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
+                              «Комментарии» в консоли.<br>
+                              Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
+                            <div class="reply">
+                              <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
+                                class="comment-edit-link">редактировать</a>
+                            </div>
+                          </div>
+                          <!--end c-body-->
+                        </div>
+                      </div>
+                      <!--end comment-box-->
+                    </li>
+                    <li class="comment even thread-even depth-1" id="comment-2">
+                      <div class="comment-box">
+                        <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
+                            2018</span>
+                        </div>
+                        <div class="comment-content-box">
+                          <div class="c-grav">
+                            <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
+                              srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
+                              class="avatar avatar-32 photo" alt="">
+                          </div>
+                          <div class="c-body">
+                            <p>Привет! Это комментарий.<br>
+                              Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
+                              «Комментарии» в консоли.<br>
+                              Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
+                            <div class="reply">
+                              <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
+                                class="comment-edit-link">редактировать</a>
+                            </div>
+                          </div>
+                          <!--end c-body-->
+                        </div>
+                      </div>
+                      <!--end comment-box-->
+                    </li>
+                    <li class="comment even thread-even depth-1" id="comment-3">
+                      <div class="comment-box">
+                        <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
+                            2018</span>
+                        </div>
+                        <div class="comment-content-box">
+                          <div class="c-grav">
+                            <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
+                              srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
+                              class="avatar avatar-32 photo" alt="">
+                          </div>
+                          <div class="c-body">
+                            <p>Привет! Это комментарий.<br>
+                              Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
+                              «Комментарии» в консоли.<br>
+                              Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
+                            <div class="reply">
+                              <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
+                                class="comment-edit-link">редактировать</a>
+                            </div>
+                          </div>
+                          <!--end c-body-->
+                        </div>
+                      </div>
+                      <!--end comment-box-->
+                      <ul class="children">
+                        <li class="comment even thread-even depth-1" id="comment-6">
+                          <div class="comment-box">
+                            <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
+                                2018</span> </div>
+                            <div class="comment-content-box">
+                              <div class="c-grav">
+                                <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
+                                  srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
+                                  class="avatar avatar-32 photo" alt="">
+                              </div>
+                              <div class="c-body">
+                                <p>Привет! Это комментарий.<br>
+                                  Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
+                                  «Комментарии» в консоли.<br>
+                                  Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
+                                <div class="reply">
+                                  <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
+                                    class="comment-edit-link">редактировать</a>
+                                </div>
+                              </div>
+                              <!--end c-body-->
+                            </div>
+                          </div>
+                          <!--end comment-box-->
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="comment even thread-even depth-1" id="comment-4">
+                      <div class="comment-box">
+                        <div class="c-head"> <a href="#" class="url"> Автор комментария</a> <span> / апрель 18
+                            2018</span>
+                        </div>
+                        <div class="comment-content-box">
+                          <div class="c-grav">
+                            <img src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=50&d=mm&r=g"
+                              srcset="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=64&d=mm&r=g 2x"
+                              class="avatar avatar-32 photo" alt="">
+                          </div>
+                          <div class="c-body">
+                            <p>Привет! Это комментарий.<br>
+                              Чтобы начать модерировать, редактировать и удалять комментарии, перейдите на экран
+                              «Комментарии» в консоли.<br>
+                              Аватары авторов комментариев загружаются с сервиса Gravatar.</p>
+                            <div class="reply">
+                              <a href="#" class="comment-reply-link">ответить</a> / <a href="#"
+                                class="comment-edit-link">редактировать</a>
+                            </div>
+                          </div>
+                          <!--end c-body-->
+                        </div>
+                      </div>
+                      <!--end comment-box-->
+                    </li>
+                  </ol>
+                  <div class="entry_footer">
+                    <div class="page-numbers">Старые комментарии</div>
+                    <div class="page-numbers">Новые комментарии</div>
+                  </div>
+                  <p class="note">Комментарии закрыты.</p>
                 </div>
-                <h5 id="postcomment">Оставить комментарий</h5>
-                <p class="logged-in">Вы должны быть <a href="#">войти под своим именем</a> чтобы оставить комментарий.
-                </p>
-                <form action="mail.php" method="post" id="commentform">
-                  <p class="bloged-in">Вошли как <a href="#">Имя</a>. <a href="#"
-                      title="Log out of this account">Выйти</a></p>
-                  <div>
-                    <label for="author" class="comment-field">Имя<span>*</span></label>
-                    <input class="commenting_input" type="text" name="author" id="author" value="">
+                <!--end #comments-->
+                <div id="respond">
+                  <div class="cancel-comment-reply">
+                    <small><a href="#" id="cancel-comment-reply-link" style="display: none;">Нажмите, чтобы отменить
+                        ответ.</a></small>
                   </div>
-                  <div>
-                    <label for="email" class="comment-field">E-mail <span>*</span></label>
-                    <input class="commenting_input" type="text" name="email" id="email" value="">
-                  </div>
-                  <div>
-                    <label for="url" class="comment-field">Адрес Вашего сайта</label>
-                    <input class="commenting_input" type="text" name="url" id="url" value="">
-                  </div>
-                  <div>
-                    <label for="comment" class="comment-field">Комментарий</label>
-                    <textarea class="commenting_textarea" name="comment" id="comment" cols="50" rows="10"
-                      tabindex="4"></textarea>
-                  </div>
-                  <div>
-                    <input class="mainbuttons" name="submit" type="submit" id="submit" value="Добавить комментарий">
-                    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
-                  </div>
-                </form>
-                <!--end commentform-->
-              </div> <!-- end respond -->
+                  <h5 id="postcomment">Оставить комментарий</h5>
+                  <p class="logged-in">Вы должны быть <a href="#">войти под своим именем</a> чтобы оставить комментарий.
+                  </p>
+                  <form action="mail.php" method="post" id="commentform">
+                    <p class="bloged-in">Вошли как <a href="#">Имя</a>. <a href="#"
+                        title="Log out of this account">Выйти</a></p>
+                    <div>
+                      <label for="author" class="comment-field">Имя<span>*</span></label>
+                      <input class="commenting_input" type="text" name="author" id="author" value="">
+                    </div>
+                    <div>
+                      <label for="email" class="comment-field">E-mail <span>*</span></label>
+                      <input class="commenting_input" type="text" name="email" id="email" value="">
+                    </div>
+                    <div>
+                      <label for="url" class="comment-field">Адрес Вашего сайта</label>
+                      <input class="commenting_input" type="text" name="url" id="url" value="">
+                    </div>
+                    <div>
+                      <label for="comment" class="comment-field">Комментарий</label>
+                      <textarea class="commenting_textarea" name="comment" id="comment" cols="50" rows="10"
+                        tabindex="4"></textarea>
+                    </div>
+                    <div>
+                      <input class="mainbuttons" name="submit" type="submit" id="submit" value="Добавить комментарий">
+                      <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
+                    </div>
+                  </form>
+                  <!--end commentform-->
+                </div> <!-- end respond -->
 
-            </div> <!--  конец  category_box -->
-          </div>
-          <div class="main_sidebar_block">
-            <div id="search-3" class="widget widget_search">
-              <h4 class="widget-title">поиск</h4>
-              <form action="mail.php" class="search-form">
-                <input type="text" class="search-field" placeholder="Поиск" value="" name="s">
-                <button type="submit" class="search-submit"> <i class="fa fa-search"></i></button>
-              </form>
+              </div> <!--  конец  category_box -->
             </div>
-            <div id="archive-3" class="widget widget_archive">
-              <h4 class="widget-title">Архив</h4>
-              <ul>
-                <li> <a href="#"> июль 2018</a></li>
-                <li> <a href="#"> август 2018</a></li>
-                <li> <a href="#"> сентябрь 2018</a></li>
-                <li> <a href="#"> октябрь 2018</a></li>
-                <li> <a href="#"> ноябрь 2018</a></li>
-              </ul>
-            </div>
-            <div id="resent_post" class="widget widget_resentpost">
-              <h4 class="widget-title">Новые посты</h4>
-              <ul>
-                <li class="recent_posts">
-                  <div class="recent_posts_images">
-                    <img src="img/blog/reseption.jpg" alt="подобные посты">
-                  </div>
-                  <div class="recent_posts_text">
-                    <a href="#" class="rpt_title">Название поста название поста название поста</a>
-                    <div class="rpt_date">июль 18, 2018</div>
-                  </div>
-                </li>
-                <li class="recent_posts">
-                  <div class="recent_posts_images">
-                    <img src="img/blog/reseption.jpg" alt="подобные посты">
-                  </div>
-                  <div class="recent_posts_text">
-                    <a href="#" class="rpt_title">Название поста название поста название поста</a>
-                    <div class="rpt_date">июль 18, 2018</div>
-                  </div>
-                </li>
-                <li class="recent_posts">
-                  <div class="recent_posts_images">
-                    <img src="img/blog/reseption.jpg" alt="подобные посты">
-                  </div>
-                  <div class="recent_posts_text">
-                    <a href="#" class="rpt_title">Название поста название поста название поста</a>
-                    <div class="rpt_date">июль 18, 2018</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div id="last_post" class="widget widget_last_post">
-              <h4 class="widget-title">Новые комментарии</h4>
-              <ul>
-                <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
-                    усыновителя</a>
-                </li>
-                <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
-                    усыновителя</a>
-                </li>
-                <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
-                    усыновителя</a>
-                </li>
-                <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
-                    усыновителя</a>
-                </li>
-              </ul>
+            <div class="main_sidebar_block">
+              <div id="search-3" class="widget widget_search">
+                <h4 class="widget-title">поиск</h4>
+                <form action="mail.php" class="search-form">
+                  <input type="text" class="search-field" placeholder="Поиск" value="" name="s">
+                  <button type="submit" class="search-submit"> <i class="fa fa-search"></i></button>
+                </form>
+              </div>
+              <div id="archive-3" class="widget widget_archive">
+                <h4 class="widget-title">Архив</h4>
+                <ul>
+                  <li> <a href="#"> июль 2018</a></li>
+                  <li> <a href="#"> август 2018</a></li>
+                  <li> <a href="#"> сентябрь 2018</a></li>
+                  <li> <a href="#"> октябрь 2018</a></li>
+                  <li> <a href="#"> ноябрь 2018</a></li>
+                </ul>
+              </div>
+              <div id="resent_post" class="widget widget_resentpost">
+                <h4 class="widget-title">Новые посты</h4>
+                <ul>
+                  <li class="recent_posts">
+                    <div class="recent_posts_images">
+                      <img src="img/blog/reseption.jpg" alt="подобные посты">
+                    </div>
+                    <div class="recent_posts_text">
+                      <a href="#" class="rpt_title">Название поста название поста название поста</a>
+                      <div class="rpt_date">июль 18, 2018</div>
+                    </div>
+                  </li>
+                  <li class="recent_posts">
+                    <div class="recent_posts_images">
+                      <img src="img/blog/reseption.jpg" alt="подобные посты">
+                    </div>
+                    <div class="recent_posts_text">
+                      <a href="#" class="rpt_title">Название поста название поста название поста</a>
+                      <div class="rpt_date">июль 18, 2018</div>
+                    </div>
+                  </li>
+                  <li class="recent_posts">
+                    <div class="recent_posts_images">
+                      <img src="img/blog/reseption.jpg" alt="подобные посты">
+                    </div>
+                    <div class="recent_posts_text">
+                      <a href="#" class="rpt_title">Название поста название поста название поста</a>
+                      <div class="rpt_date">июль 18, 2018</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="last_post" class="widget widget_last_post">
+                <h4 class="widget-title">Новые комментарии</h4>
+                <ul>
+                  <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
+                      усыновителя</a>
+                  </li>
+                  <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
+                      усыновителя</a>
+                  </li>
+                  <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
+                      усыновителя</a>
+                  </li>
+                  <li> Надежда колюжная к записи <a href="#">Советы от некоммерческого стандартного раннего
+                      усыновителя</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-
+    </section>
 
 
 

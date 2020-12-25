@@ -74,7 +74,7 @@ function scripts() {
 		.pipe(strip())
 		.pipe(rigger())
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+	//	.pipe(uglify())
 		.pipe(dest('app/js/'))
 		.pipe(browserSync.stream())
 }

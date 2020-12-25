@@ -855,7 +855,7 @@ p.adwice_text {
 }
 
 .block-get-info {
-  padding: 10px;
+  padding: 0 10px 20px;
   width: 100%;
   color: #ffffff;
 }
@@ -888,6 +888,17 @@ p.adwice_text {
 
 .block-get-info-text_adress {
   font-size: 0.805em;
+}
+
+.block-get-info-text_adress a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.block-get-info-text_adress a:hover {
+  @include trans;
+
+  text-decoration: underline;
 }
 
 /* стили кнопки наверх */

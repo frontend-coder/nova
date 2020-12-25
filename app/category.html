@@ -29,83 +29,74 @@
 <body>
   <!-- Custom HTML -->
   <header class="header_fon_page">
-    <div class="top_line">
+    <div class="t__linne">
       <div class="container">
-        <div class="row">
-          <div class="top_line_box">
-            <div class="top_line_logo">
-              <img src="img/logo.png" alt="логотип для сайта">
-            </div>
+        <!-- menu_hightlight -->
+        <div class="nav_wrapper">
+          <div class="top_line_logo">
+            <img src="img/logo.png" alt="логотип для сайта">
+          </div>
+          <div class="spinner-master">
+            <input type="checkbox" id="spinner-form" />
+            <label for="spinner-form" class="spinner-spin">
+              <span class="spinner diagonal part-1"></span>
+              <span class="spinner horizontal"></span>
+              <span class="spinner diagonal part-2"></span>
+            </label>
+          </div>
 
-            <div id="cssmenu" class="menu_hightlight">
-              <ul>
-                <li><a href="./">главная</a></li>
-                <li class="menu-item-has-children"><a href="./page.html">о нас</a>
-                  <ul>
-                    <li><a href="./page.html">Кто должен делать это </a></li>
-                    <li><a href="./page.html">Cтраница</a></li>
-                    <li><a href="./page.html">Cтраница</a></li>
-                    <li class="menu-item-has-children"><a href="./page.html">Продукт первый</a>
-                      <ul>
-                        <li><a href="./page.html">субпункт</a></li>
-                        <li><a href="./page.html">Касубпункт</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="./page.html">услуги</a></li>
-                <li><a href="./page.html">портфолио</a></li>
-                <li><a href="./page.html">отзывы</a></li>
-                <li><a href="./page.html">цены</a></li>
-                <li><a href="./category.html">блог</a></li>
-                <li><a href="./page.html">контакты</a></li>
-              </ul>
-            </div>
-
-            <div class="top_line_social">
-              <ul>
-                <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
-                      aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/frontendercode/" target="_blank"><i class="fa fa-instagram"
-                      aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/frontend-coder" target="_blank"><i class="fa fa-github-alt"
-                      aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-
-            <div class="burger">
-              <a href="#" class="burger_button">
-                <span class="burger_lines"></span>
-              </a>
-              <nav class="burger_nav">
+          <nav id="menu" class="menu">
+            <ul class="dropdown">
+              <li><a href="./" title="Link">Главная</a></li>
+              <li class="menu-item-has-children"><a href="./page.html" title="Link">О нас</a>
                 <ul>
-                  <li><a href="./">главная</a></li>
-                  <li class="menu-item-has-children"><a href="./page.html">о нас</a>
+                  <li class="menu-item-has-children"><a href="./page.html" title="Link">CтраницаГ </a>
                     <ul>
-                      <li><a href="./page.html">Кто должен делать это </a></li>
-                      <li><a href="./page.html">Cтраница</a></li>
-                      <li><a href="./page.html">Cтраница</a></li>
-                      <li class="menu-item-has-children"><a href="./page.html">Продукт первый</a>
-                        <ul>
-                          <li><a href="./page.html">субпункт</a></li>
-                          <li><a href="./page.html">Касубпункт</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="./single.html" title="Link">Cтраница1</a></li>
+                      <li><a href="./page.html" title="Link">Cтраница2</a></li>
                     </ul>
                   </li>
-                  <li><a href="./page.html">услуги</a></li>
-                  <li><a href="./page.html">портфолио</a></li>
-                  <li><a href="./page.html">отзывы</a></li>
-                  <li><a href="./page.html">цены</a></li>
-                  <li><a href="./category.html">блог</a></li>
-                  <li><a href="./page.html">контакты</a></li>
+                  <li class="menu-item-has-children"><a href="./page.html" title="Link">Документы </a>
+                    <ul>
+                      <li><a href="./page.html" title="Link">Сертификаты1</a></li>
+                      <li><a href="./page.html" title="Link">Паспорта2</a></li>
+                      <li><a href="./page.html" title="Link">Патенты3 </a></li>
+                    </ul>
+                  </li>
                 </ul>
-              </nav>
-              <div class="burger_overlay"></div>
-            </div>
+              </li>
+              <li><a href="./page.html">Услуги</a></li>
+              <li><a href="./page.html">Портфолио</a></li>
+              <li><a href="./page.html">Отзывы</a></li>
+              <li><a href="./page.html">Цены</a></li>
+              <li><a href="./category.html">Блог</a></li>
+              <li><a href="./page.html">Контакты</a></li>
+
+            </ul>
+          </nav>
+          <a href="#search_box" class="btn__search" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+
+          <!-- кнопка социальных сетех -->
+          <div class="top_line_social">
+            <ul>
+              <li><a href="https://www.facebook.com/frontendercode" target="_blank"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/frontendercode/" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/frontend-coder" target="_blank"><i class="fa fa-github-alt"
+                    aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <form class="search_box" id="search_box" action="/search/">
+        <div class="search_input">
+          <input name="search_criteria" placeholder="Найти все" value="" type="text">
+          <input class="search_icon" value="Поиск" type="submit">
+        </div>
+      </form>
+
     </div>
     <!-- конец top_line -->
 
@@ -113,7 +104,7 @@
 
   <main>
 
-    <section class="breadcrumbs_page">
+    <div class="breadcrumbs_page">
       <div class="container">
         <div class="row">
           <div class="breadcrumbs_box">
@@ -124,13 +115,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="container">
       <div class="row">
         <div class="main_block clearfix">
           <div class="main_content_block">
-            <div class="category_box">
+            
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -146,8 +138,8 @@
                 </p>
                 <a href="./single.html" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
-            <div class="category_box">
+            </article>
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -163,8 +155,8 @@
                 </p>
                 <a href="./single.html" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
-            <div class="category_box">
+            </article>
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -180,8 +172,8 @@
                 </p>
                 <a href="#" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
-            <div class="category_box">
+            </article>
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -197,8 +189,8 @@
                 </p>
                 <a href="./single.html" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
-            <div class="category_box">
+            </article>
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -214,8 +206,8 @@
                 </p>
                 <a href="./single.html" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
-            <div class="category_box">
+            </article>
+            <article class="category_box">
               <div class="thamb_images">
                 <img src="img/galary/1.jpg" alt="картинка">
               </div>
@@ -231,7 +223,7 @@
                 </p>
                 <a href="./single.html" class="mainbuttons"> прочесть все</a>
               </div>
-            </div>
+            </article>
             <!-- Pagination -->
             <nav class="pagination">
               <ul>
@@ -322,7 +314,6 @@
       </div>
     </div>
 
-
   </main><!-- /main -->
 
   <footer>
@@ -348,80 +339,7 @@
     </div>
   </footer><!-- /footer -->
 
-
-  <!--оформление скрытой всплывающей формы женщины с таймером -->
-  <div class="hidden">
-    <form class="form-callback forms-calldecor" id="call-back">
-
-      <input type="hidden" name="admin-data">
-      <input type="hidden" name="formaone" value="форма размещена во всплывающем окне">
-      <div class="success">
-        <p>Спасибо за заявку</p>
-      </div>
-
-      <h4>Подайте заявку</h4>
-      <h5>наш менеджер свяжется с вами в течение 30 минут!</h5>
-      <label>
-        <input id="author_two" class="popup_input" type="text" name="author" value=""
-          placeholder="Например, Олег Юрьевич" required="required" />
-      </label>
-      <label>
-        <input id="phone_key" class="popup_input" type="tel" name="phone" value="" required="required" />
-      </label>
-      <button class="popup_submit">Отправить</button>
-      <div class="checkbox_box">
-        <div class="checkbox custom">
-          <input id="phone_headeroption1" class="css-checkbox" type="checkbox" />
-          <label for="phone_headeroption1" class="css-label">Я даю согласие на обработку своих персональных данных и
-            ознакомлен с
-            <a href="#">политикой конфиденциальности</a>
-
-          </label>
-        </div>
-      </div>
-    </form>
-  </div>
-
   <script src="js/scripts.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/lazysizes.min.js"></script>
-  <script src="js/jquery.waypoints.js"></script>
-  <script src="js/jquery.counterup.js"></script>
-  <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
-  <script>
-    // pagination on lending pages
-    $('.top_line_menu ul li a, .text-list li a').mPageScroll2id({
-      layout: 'auto',
-      offset: '.top_line_box',
-      autoScrollSpeed: true,
-      scrollSpeed: 1000,
-      scrollEasing: 'linear',
-      highlightByNextTarget: true,
-      keepHighlightUntilNext: true,
-      highlightSelector: '.menu_hightlight ul li a'
-
-    });
-  </script>
-
-  <script>
-    window.lazySizesConfig = window.lazySizesConfig || {};
-    //only for demo in production I would use normal expand option 
-    window.lazySizesConfig.expand = 9;
-    $(function () {
-      $('#Container').mixItUp();
-    });
-  </script>
-  <script>
-    $(".animate-number-block_caunt").counterUp({
-      delay: 30,
-      time: 2000,
-      offset: 60,
-      beginAt: 100,
-      formatter: function (n) {
-        return n.replace(/,/g, '.');
-      }
-    });
-  </script>
 
 </body>
 
