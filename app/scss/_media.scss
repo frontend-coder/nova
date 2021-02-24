@@ -1,16 +1,14 @@
-/*==========  Desktop First  ==========*/
-@media only screen and (max-width : 1440px) {}
+/* ==========  Desktop First  ========== */
+@media only screen and (max-width: 1440px) {}
 
-@media only screen and (max-width : 1280px) {}
+@media only screen and (max-width: 1280px) {}
 
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width: 1200px) {}
 
-
-@media only screen and (max-width : 1190px) {}
+@media only screen and (max-width: 1190px) {}
 
 // 1112
 @media screen and (max-width: 1080px) {
-
   /* делать это разрешение */
   #cssmenu {
     display: none;
@@ -24,20 +22,13 @@
     text-align: left;
   }
 
-  .checkbox_box input[type=checkbox].css-checkbox+label.css-label {
-    padding-left: 29px;
+  .checkbox_box input[type=checkbox].css-checkbox +label.css-label {
+    padding-left: 4px;
   }
-
-
-
-
-
-
 }
 
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
-
   /* делать это разрешение */
   .burger_button {
     width: 50px;
@@ -45,42 +36,36 @@
   }
 
   .burger_lines,
-  .burger_lines:after,
-  .burger_lines:before {
+  .burger_lines::after,
+  .burger_lines::before {
     width: 30px;
     height: 3px;
   }
 
-  .burger_lines:before {
+  .burger_lines::before {
     top: 9px;
   }
 
-  .burger_lines:after {
+  .burger_lines::after {
     top: -9px;
   }
 
   h2.block_title {
     font-size: 1.4rem;
   }
-
-
 }
-
 
 @media only screen and (max-width: 992px) {
   .title-header h1 {
-    font-size: 2.10em;
+    font-size: 2.1em;
     line-height: 1.6;
   }
 }
 
 @media only screen and (max-width: 960px) {
-
   .title-header {
     width: 70%;
   }
-
-
 
   .our_pred_icon {
     width: 18%;
@@ -95,10 +80,9 @@
   }
 
   .price_boxing_items {
-    width: 47%;
     margin-bottom: 30px;
+    width: 47%;
   }
-
 }
 
 @media only screen and (max-width: 834px) {
@@ -124,8 +108,8 @@
 
   .why_choice_items:nth-child(2) {
     order: 0;
-    text-align: center;
     margin-bottom: 25px;
+    text-align: center;
   }
 
   .why_choice_items:nth-child(2) img {
@@ -142,8 +126,8 @@
   }
 
   .filter_right {
-    text-align: right;
     margin-top: 0;
+    text-align: right;
   }
 
   .abf_box {
@@ -156,26 +140,24 @@
   }
 
   .blog-block {
-    width: 80%;
+    margin: 0 auto 25px;
     margin-right: 0;
     padding: 0;
-    margin: 0 auto 25px;
+    width: 80%;
   }
 
   .blog-block:nth-child(3n+3) {
-    margin: 0 auto 0;
+    margin: 0 auto;
   }
 
   .copyright_line {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-
 }
 
 @media only screen and (max-width: 812px) {}
 
 @media only screen and (max-width: 800px) {
-
   .project-cards .portfolio {
     width: 50%;
   }
@@ -192,32 +174,30 @@
   .get-info_left {
     margin-bottom: 25px;
   }
-
-
-
 }
 
 @media only screen and (max-width: 768px) {
-
-  /*Disable Animation on Mobile Devices*/
+  /* Disable Animation on Mobile Devices */
   .animated {
-    /*CSS transitions*/
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-    /*CSS transforms*/
-    -o-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
+    /* CSS transforms */
     transform: none !important;
-    /*CSS animations*/
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
+    transform: none !important;
+    transform: none !important;
+    transform: none !important;
+    transform: none !important;
+
+    /* CSS transitions */
+    transition-property: none !important;
+    transition-property: none !important;
+    transition-property: none !important;
+    transition-property: none !important;
+    transition-property: none !important;
+
+    /* CSS animations */
+    animation: none !important;
+    animation: none !important;
+    animation: none !important;
+    animation: none !important;
     animation: none !important;
   }
 
@@ -233,15 +213,6 @@
   .block_mini_text {
     font-size: 1.56rem;
   }
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -250,28 +221,25 @@
 
 @media only screen and (max-width: 736px) {
   .creat_block_items {
-    width: 100%;
-    margin-right: 0;
     float: none;
+    margin-right: 0;
+    width: 100%;
   }
 
   .creat-block-img:nth-child(1) {
-    text-align: center;
     margin-bottom: 25px;
+    text-align: center;
   }
 
   .creat-block-img:nth-child(1) img {
-    width: 80%;
     display: inline-block;
+    width: 80%;
   }
 
   .price_boxing_items {
-    width: 90%;
     margin: 0 auto 25px;
+    width: 90%;
   }
-
-
-
 }
 
 @media only screen and (max-width: 734px) {}
@@ -287,26 +255,24 @@
 @media only screen and (max-width: 640px) {}
 
 @media only screen and (max-width: 600px) {
-
   /* делать это разрешение */
   .title-header h1 {
-    font-size: 1.55em;
-    margin-bottom: 20px;
     margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1.55em;
   }
 
   .block_descrip {
-    margin: 0 2% 3.0%;
+    margin: 0 2% 3%;
   }
 
   .our_pred_block_items {
-    width: 90%;
     margin: 0 auto 25px;
+    width: 90%;
   }
 
   .our_pred_block_items:nth-child(even) {
     margin: 0 auto 25px;
-
   }
 
   .block_mini_box {
@@ -327,13 +293,11 @@
   .filter_right li a {
     padding: 1px 15px;
   }
-
 }
 
 @media only screen and (max-width: 568px) {}
 
 @media only screen and (max-width: 480px) {
-
   /* делать это разрешение */
   .filter_left,
   .filter_right {
@@ -361,8 +325,8 @@
   }
 
   .abf_box_items {
-    width: 90%;
     margin: 0 auto 25px;
+    width: 90%;
   }
 
   .title-header h1 {
@@ -379,38 +343,36 @@
   }
 
   .burger_lines,
-  .burger_lines:after,
-  .burger_lines:before {
+  .burger_lines::after,
+  .burger_lines::before {
     width: 15px;
     height: 1px;
   }
 
-  .burger_lines:before {
+  .burger_lines::before {
     top: 5px;
   }
 
-  .burger_lines:after {
+  .burger_lines::after {
     top: -5px;
   }
 
   .title-header h3 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .title-header-li ul li {
-    font-size: 1.00em;
+    font-size: 1em;
   }
 
   .owl-carousel {
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
   }
 
   .brand_box-img {
     width: 90%;
   }
-
-
 }
 
 @media only screen and (max-width: 414px) {}
@@ -427,7 +389,7 @@
   }
 
   .animate-number-block_descr {
-    font-size: 1.0em;
+    font-size: 1em;
   }
 
   .price_boxing_items,
@@ -446,9 +408,6 @@
   .top_line_logo {
     text-align: left;
   }
-
-
-
 }
 
 @media only screen and (max-width: 375px) {
@@ -463,8 +422,8 @@
   .top_line_social ul li a {
     width: 20px;
     height: 20px;
+    font-size: 0.7em;
     line-height: 20px;
-    font-size: .7em;
   }
 
   .creat-block-title {
@@ -474,7 +433,6 @@
   h2.block_title {
     font-size: 1.3rem;
   }
-
 }
 
 @media only screen and (max-width: 360px) {}
@@ -483,7 +441,7 @@
 
 
 
-/*==========  Mobile First  ==========*/
+/* ==========  Mobile First  ========== */
 
 
 
